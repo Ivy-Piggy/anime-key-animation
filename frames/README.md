@@ -19,6 +19,18 @@
 
 ---
 
+## 一·B、现有图证（《02 表演原画》四张，2026-09-30）
+
+| 文件 | 内容 | 配哪一节 |
+|------|------|----------|
+| `02-acting-1-au-map.png` | 面部 AU 地图：7 个常用 AU 的位置 + 「只动嘴的笑是假笑」 | [微表情 FACS](../02-acting/01-microexpression-facs.md) §二 |
+| `02-acting-2-layers.png` | 三层表情（macro / subtle / micro）的强度谱与时间尺度 + 近景配比条 | 同上 §四 |
+| `02-acting-3-six-clocks.png` | 六条时钟的错拍时间轴（视线/眨眼/呼吸/头/手/嘴） | [近景表演清单](../02-acting/02-closeup-acting.md) §一 |
+| `02-acting-4-three-seconds.png` | 三秒结构 72 帧的情绪强度弧线（反应延迟 → hold → 慢收回） | 同上 §二 |
+| `02-acting-图证总览.png` | 上面四张的 2×2 拼版（投屏 / 打印用） | — |
+
+脚本：`python3 frames/make_figs_acting.py`（同上，改数值即出新图）。
+
 ## 二、怎么重绘（改数值即出新图）
 
 ```bash
