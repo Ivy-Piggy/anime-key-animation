@@ -9,6 +9,7 @@
 | [03-ai-video-pipeline.md](03-ai-video-pipeline.md) | **AI 视频的确定性流程（反"抽卡"）**：四锚 · ≤2 秒分段 · 抽卡日志 · 分工表 |
 | [04-one-take.md](04-one-take.md) | **一镜到底（AI 版）**：分段生成 + 三种缝法 + 无缝检查三点 |
 | [05-motion-breakdown.md](05-motion-breakdown.md) | **动作拆解五步法**：把一个动作变成可执行的"施工单"（含常见动作速查表） |
+| [06-transition-eye.md](06-transition-eye.md) | **眼睛转场（推镜入瞳 · 虹膜匹配剪辑）**：三段结构 · 三条对齐 · 圆遮罩参数 · 三台阶奇幻画面 |
 
 ## 一个前置判断（很重要）
 
