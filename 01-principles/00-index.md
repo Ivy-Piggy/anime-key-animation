@@ -10,6 +10,7 @@
 | [04-frame-recipes.md](04-frame-recipes.md) | 帧数配方表 | 走/跑/转/跳/落的经验帧数区间（24fps，标注一拍二/三） |
 | [05-silhouette-line.md](05-silhouette-line.md) | 剪影、张力线与造型 | 关掉颜色和细节，只看黑剪影能否读懂动作 |
 | [06-drawing-order.md](06-drawing-order.md) | 作画顺序与层结构 | 从中心线、体块到衣纹的落笔次序（决定能不能改） |
+| [07-clinic.md](07-clinic.md) | **原画门诊：症状 → 处方** | **对着回放找症状，按表格拧旋钮 —— 实践层入口，先看这页** |
 
 ---
 

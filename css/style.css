@@ -127,6 +127,7 @@ h2 .hl{background:linear-gradient(transparent 60%, rgba(255,198,26,.85) 60%)}
 .prob:nth-child(1){background:#FFF1F4}
 .prob:nth-child(2){background:#FFF6E8}
 .prob:nth-child(3){background:#EFFBF6}
+.prob:nth-child(4){background:#F3EEFF}
 
 /* ---------- 模块地图 ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}
