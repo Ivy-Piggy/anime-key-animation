@@ -6,6 +6,9 @@
 |------|------|
 | [01-pipeline.md](01-pipeline.md) | 从脚本到原画的工序（迪士尼/皮克斯与日式 2D 的对照） |
 | [02-self-check.md](02-self-check.md) | 交稿前自检表（10 问 / 30 项） |
+| [03-ai-video-pipeline.md](03-ai-video-pipeline.md) | **AI 视频的确定性流程（反"抽卡"）**：四锚 · ≤2 秒分段 · 抽卡日志 · 分工表 |
+| [04-one-take.md](04-one-take.md) | **一镜到底（AI 版）**：分段生成 + 三种缝法 + 无缝检查三点 |
+| [05-motion-breakdown.md](05-motion-breakdown.md) | **动作拆解五步法**：把一个动作变成可执行的"施工单"（含常见动作速查表） |
 
 ## 一个前置判断（很重要）
 
