@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>帧数配方表（24fps 经验区间） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>帧数配方表（24fps 经验区间）</h1>
+<blockquote><p>⚠️ 这是<strong>行业经验区间</strong>，不是物理定律。角色重量、风格（美式夸张 / 日式写实 / 戏曲程式）不同都要改。</p><p>用法：先按配方起稿 → 再按自己的角色调 20–30%。</p></blockquote>
+<hr>
+<h2>一、基本速度表（24fps）</h2>
+<table><thead><tr><th>动作</th><th>一拍二张数</th><th>折合帧数</th><th>折合秒</th><th>备注</th></tr></thead><tbody><tr><td>常人走一步</td><td>6 张</td><td>12 帧</td><td>0.5 s</td><td>一个完整周期（两步）24 帧 = 1 秒</td></tr><tr><td>慢走 / 衰弱 / 老态一步</td><td>8–10 张</td><td>16–20 帧</td><td>0.7–0.8 s</td><td>步幅小、重心起伏大</td></tr><tr><td>快步一步</td><td>4 张</td><td>8 帧</td><td>0.33 s</td><td>身体前倾</td></tr><tr><td>跑一步</td><td>3–4 张</td><td>6–8 帧</td><td>0.25–0.33 s</td><td>一个循环 12–16 帧</td></tr><tr><td>冲刺 / 日本式快跑循环</td><td>4–6 张（一拍三）</td><td>12–18 帧</td><td>0.5–0.75 s</td><td>抽帧制造"暴走感"</td></tr><tr><td>180° 转身</td><td>5–6 张</td><td>10–12 帧</td><td>0.4–0.5 s</td><td>中间抽 2 帧更有力</td></tr><tr><td>回头（仅头部）</td><td>3–4 张</td><td>6–8 帧</td><td>0.25–0.33 s</td><td>前面 2 帧预备，后面急</td></tr><tr><td>惊愕回头</td><td>3–5 张</td><td>6–10 帧</td><td>—</td><td>抽帧 + 到位后 hold 3–4 帧</td></tr><tr><td>眨眼（正常）</td><td>2 张</td><td>3–4 帧</td><td>0.12–0.17 s</td><td>闭 2 帧、开 2 帧；情绪眨眼更慢</td></tr><tr><td>呼吸起伏（静坐近景）</td><td>—</td><td>24–36 帧/次</td><td>1–1.5 s</td><td><strong>近景表演的地基</strong>，不能省</td></tr><tr><td>眼睛微移（看→看）</td><td>1–2 张</td><td>2–4 帧</td><td>&lt;0.17 s</td><td>极短促，是"心动"的瞬间</td></tr><tr><td>微笑（从平到笑）</td><td>4–6 张</td><td>8–12 帧</td><td>0.33–0.5 s</td><td>缓入：前松后密</td></tr><tr><td>一串笑（连续）</td><td>—</td><td>12–24 帧</td><td>0.5–1 s</td><td>用 2–3 次起伏，不要一条曲线</td></tr><tr><td>哭（眼泪落下）</td><td>—</td><td>泪珠 4–6 帧</td><td>—</td><td>泪珠要"拉长—脱离—下落"三段</td></tr><tr><td>花枝/袖口飘动</td><td>—</td><td>循环 16–24 帧</td><td>—</td><td>慢于角色主体动作</td></tr></tbody></table>
+<hr>
+<h2>二、跳（完整分段配方）</h2>
+<table><thead><tr><th>阶段</th><th>帧数</th><th>关键</th></tr></thead><tbody><tr><td>预备（下蹲蓄力）</td><td>4–6 帧</td><td>欲上先下；下蹲越深跳越高（视觉约定）</td></tr><tr><td>蹬地（离地瞬间）</td><td>2 帧</td><td>拉长变形；帧数极少 = 爆发</td></tr><tr><td>上升</td><td>4–8 帧</td><td>间距由大到小（减速上升）</td></tr><tr><td>顶点（滞空）</td><td>2–4 帧 hold</td><td><strong>停顿在顶点</strong>，观众才感到"跳起来了"</td></tr><tr><td>下落</td><td>4–6 帧</td><td>间距由小到大（加速）</td></tr><tr><td>触地（压缩）</td><td>1–2 帧</td><td>压扁；这是"重量"的全部来源</td></tr><tr><td>缓冲回稳</td><td>6–8 帧</td><td>2–3 次递减反弹后静止</td></tr></tbody></table>
+<blockquote><p><strong>最常见的三个错误</strong>：① 没有顶点滞空 ② 落地没有压缩帧 ③ 缓冲一次到位（没有递减的余震）。</p></blockquote>
+<hr>
+<h2>三、戏曲 / 程式化动作的调整方向</h2>
+<table><thead><tr><th>通用配方</th><th>戏曲动画的调整</th><th>原因</th></tr></thead><tbody><tr><td>走路 12 帧/步</td><td><strong>延长到 16–24 帧</strong>，步幅小而平稳</td><td>台步/圆场是"滑行"式的，起伏极小</td></tr><tr><td>转身 8–12 帧</td><td>加长到 14–20 帧，中间加 2–3 帧 hold 完成"转身亮相"</td><td>亮相需要时间被看见</td></tr><tr><td>表情 8–12 帧</td><td>放慢到 16–24 帧，幅度缩小</td><td>戏曲的表演是节制的、含蓄的</td></tr><tr><td>袖子跟随 4 帧</td><td>延后到 8–12 帧，且做"抖—掷—收"三段式</td><td>水袖是表演器官，不是附属物</td></tr></tbody></table>
+<hr>
+<h2>四、课堂练习</h2>
+<ol><li><strong>配方复原</strong>：给"跳"的配方表，让同学按表画 24 帧，再录下来自评哪一段垮了。</li><li><strong>重量对照</strong>：同一段跳，画"羽毛版"（顶点滞空 6 帧）与"铅球版"（滞空 1 帧、落地压缩 3 帧）。</li><li><strong>眨眼练</strong>：给一段近景，专画眨眼 3 帧（闭—半闭—开），贴在原画上检查是否"活了"。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>06 工作法 · 模块导览 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>06 工作法 · 模块导览</h1>
+<blockquote><p>从"想"到"画"到"过审"的流程。这一模块解决：<strong>为什么明明每个环节都做了，成品还是不对。</strong></p></blockquote>
+<table><thead><tr><th>文件</th><th>内容</th></tr></thead><tbody><tr><td><a href="01-pipeline.html">01-pipeline.md</a></td><td>从脚本到原画的工序（迪士尼/皮克斯与日式 2D 的对照）</td></tr><tr><td><a href="02-self-check.html">02-self-check.md</a></td><td>交稿前自检表（10 问 / 30 项）</td></tr><tr><td><a href="03-ai-video-pipeline.html">03-ai-video-pipeline.md</a></td><td><strong>AI 视频的确定性流程（反"抽卡"）</strong>：四锚 · ≤2 秒分段 · 抽卡日志 · 分工表</td></tr><tr><td><a href="04-one-take.html">04-one-take.md</a></td><td><strong>一镜到底（AI 版）</strong>：分段生成 + 三种缝法 + 无缝检查三点</td></tr><tr><td><a href="05-motion-breakdown.html">05-motion-breakdown.md</a></td><td><strong>动作拆解五步法</strong>：把一个动作变成可执行的"施工单"（含常见动作速查表）</td></tr><tr><td><a href="06-transition-eye.html">06-transition-eye.md</a></td><td><strong>眼睛转场（推镜入瞳 · 虹膜匹配剪辑）</strong>：三段结构 · 三条对齐 · 圆遮罩参数 · 三台阶奇幻画面</td></tr></tbody></table>
+<h2>一个前置判断（很重要）</h2>
+<p><strong>"努力达不到要求"最常见的流程性原因</strong>：</p>
+<table><thead><tr><th>症状</th><th>流程原因</th><th>修法</th></tr></thead><tbody><tr><td>反工无限</td><td>在层 1（画）上反复修改，而层 3（表演设计）从未定稿</td><td><strong>先定表演设计</strong>（意图、节奏、板眼），再动笔</td></tr><tr><td>越改越差</td><td>缺"参考—试笔—定稿"的分段</td><td>强制分三段：节奏表 → 关键姿势 → 完成</td></tr><tr><td>各自为政</td><td>没有统一"表演口径"（每个镜头尺度不同）</td><td>写一份<strong>表演方针</strong>（幅度、帧数、视线规则）给全组</td></tr><tr><td>近景就是不"活"</td><td>近景没给足时间（按全景的节奏切）</td><td>近景给 1.5–2 倍时长</td></tr></tbody></table>
+<hr>
+<h2>核心建议：开一个"表演方针书"（一页纸）</h2>
+<p>每个片子开做前，全组共用一个口径（把本库的参数抄进自己的方针书）：</p>
+<pre><code>■ 尺度：大表情幅度 __%（戏曲建议 40–60%）
+■ 微表情：__帧，插入位置规则：______
+■ 建立/收回帧数比：__:__（建议 1:2.5）
+■ hold 占比：__%（戏曲建议 30–40%）
+■ 常速/快/慢的打数：一拍__/__/__
+■ 视线规则：眼比头早 __ 帧；禁止 ______
+■ 呼吸：周期 __ 帧，永不停止
+■ 布料：独立层；滞后 __ 帧；余波 __ 次
+■ 镜头：近景时长 = 全景 × __
+■ 禁止清单：______（如禁止对称表情、禁止全身变形）</code></pre>
+<blockquote><p>一页纸的口径，比十次返工便宜。这张表也是你给学生打分、给同行讲片子的依据。</p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

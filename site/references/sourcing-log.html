@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>检索与核验记录 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>检索与核验记录</h1>
+<blockquote><p>每一处"作品—人—镜头"的归属，都要在这里留痕。<strong>宁写"某作品某段落"，不写"某人某镜头"。</strong></p></blockquote>
+<hr>
+<h2>一、核验状态说明</h2>
+<table><thead><tr><th>标记</th><th>含义</th></tr></thead><tbody><tr><td>✅ 已核验</td><td>已在 sakugabooru 与 原画@wiki / BD 特典 中至少两处一致</td></tr><tr><td>⚠️ 存疑</td><td>只有单一来源，或来源间不一致</td></tr><tr><td>❌ 已排除</td><td>核验后发现错误，已从条目中移除</td></tr><tr><td>🔎 待核</td><td>尚未核验（本库中大量原画师-作品归属属此级）</td></tr></tbody></table>
+<p><strong>全库默认状态</strong>：04-sakuga 模块中所有"某某参与了某作品"均为 🔎/⚠️ 级——<strong>引用前必须自行核验</strong>。</p>
+<hr>
+<h2>二、核验记录表（模板）</h2>
+<table><thead><tr><th>日期</th><th>条目</th><th>主张（谁 · 哪个作品 · 哪段）</th><th>来源 1</th><th>来源 2</th><th>结论</th><th>处理</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p>（示例行）</p>
+<table><thead><tr><th>日期</th><th>条目</th><th>主张</th><th>来源 1</th><th>来源 2</th><th>结论</th><th>处理</th></tr></thead><tbody><tr><td>2026-09-30</td><td>04-sakuga/03</td><td>井上俊之参与《AKIRA》原画</td><td>sakugabooru</td><td>原画@wiki</td><td>⚠️ 待补两来源一致</td><td>条目中已标 ⚠️</td></tr></tbody></table>
+<hr>
+<h2>三、本轮建档状态（2026-09-30 首次建档）</h2>
+<table><thead><tr><th>模块</th><th>内容性质</th><th>可靠性</th></tr></thead><tbody><tr><td>01-principles</td><td>原理/经验（行业共识）</td><td>✅ 可放心使用</td></tr><tr><td>02-acting</td><td>FACS 原文信息 ✅ / 动画转译为建议 ⚠️</td><td>转译参数需自测</td></tr><tr><td>03-motion</td><td>规律与配方为经验区间 ⚠️</td><td>需按自己的角色调 ±30%</td></tr><tr><td>04-sakuga</td><td><strong>术语 ✅ / 人员-作品归属 ⚠️ 待核</strong></td><td>引用前必查</td></tr><tr><td>05-china</td><td>史实（作品/年代/厂牌）✅ / 创作分工 ⚠️</td><td>分工待核</td></tr><tr><td>06-workflow</td><td>工序与自检表（经验）✅</td><td>可直接用</td></tr><tr><td>07-resources</td><td>书与站点 ✅（版本信息 ⚠️ 待核）</td><td>版本以图书馆/知网为准</td></tr></tbody></table>
+<hr>
+<h2>四、待核清单（下一步要做的核验）</h2>
+<ul><li>☐ 《大闹天宫》《骄傲的将军》《天书奇谭》的<strong>原画/动画设计人员</strong>名单（→ 可用于教学与论文）</li><li>☐ 《粉墨宝贝》等昆曲题材动画的制作团队与年份 ⚠️</li><li>☐ 04-sakuga 各原画师档案里的<strong>代表作与镜头</strong>逐条核对</li><li>☐ 书籍的中译名/出版社/版次（《动画师生存手册》《生命的幻象》《动画的时间掌握》《动画表演》）——<strong>以豆瓣/读秀/图书馆核对</strong></li><li>☐ 《梨园原》《审音鉴古录》的<strong>版本与影印本出处</strong> ⚠️</li><li>☐ 《牡丹亭》所用<strong>曲牌与板式</strong>（以实际录音为准）</li></ul>
+<hr>
+<h2>五、核验方法速查</h2>
+<pre><code>1. sakugabooru  → 片段 + 原画师标注（含 confidence）
+2. 原画@wiki     → 逐集原画表记
+3. BD 特典/原画集 → 最可靠
+4. 两处一致 → ✅ ；否则 → ⚠️ 存疑（写"归属存疑"）
+5. 中文图书     → 豆瓣/读秀/图书馆核对版本与页码
+6. 中文论文     → CNKI 核对篇名/作者/年卷期页</code></pre>
+<blockquote><p><strong>原则</strong>：不确定就写"存疑"。这个领域里，"说得太肯定"比"说得不确定"更致命。</p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

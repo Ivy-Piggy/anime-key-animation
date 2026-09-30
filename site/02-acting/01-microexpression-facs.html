@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>微表情：FACS 动作单元 → 原画帧 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>微表情：FACS 动作单元 → 原画帧</h1>
+<blockquote><p>✅ 原理层（FACS 本身是心理学/面部研究的标准系统）+ ⚠️ 应用为动画转译建议。</p><p>这一页解决的是：<strong>为什么"五官画得很细"反而更假。</strong></p></blockquote>
+<hr>
+<h2>一、先破一个误会：表情不是靠嘴</h2>
+<p>面部表情的"真"，主要靠两个地方：</p>
+<table><thead><tr><th>部位</th><th>为什么关键</th><th>业余作品的通病</th></tr></thead><tbody><tr><td><strong>眼周（眼轮匝肌，AU6）</strong></td><td>真笑的证据：眼角收紧、下眼睑上顶、出现"鱼尾"</td><td>只把嘴角提上去 → 社交假笑</td></tr><tr><td><strong>鼻唇沟 / 面颊（AU12 带起的颊部）</strong></td><td>笑是"脸的下半部分整体移动"，不只是嘴</td><td>嘴单独变形 → 嘴在脸上"漂"</td></tr></tbody></table>
+<blockquote><p><strong>行业里最有用的一条判断</strong>：<strong>只动嘴的笑是假笑</strong>（Duchenne 假笑 vs 真笑）。</p><p>真笑 = <strong>AU6 + AU12 同时 到位</strong>，而且 <strong>AU6 有 2–4 帧的"提前量"或"滞后"</strong>——眼先动、嘴后到，这一段错拍就是"真"。</p></blockquote>
+<hr>
+<h2>二、最小的动作单元表（够用版）</h2>
+<p>FACS（Facial Action Coding System, Ekman &amp; Friesen, 1978）把面部动作拆成几十个 AU（Action Unit）。动画上不需要全背，<strong>这 12 个够覆盖 90% 的表演</strong>：</p>
+<table><thead><tr><th>AU</th><th>名称</th><th>做法</th><th>情绪/含义</th></tr></thead><tbody><tr><td>AU1</td><td>内眉上扬</td><td>眉头内侧提高</td><td>悲伤、担忧、恳求</td></tr><tr><td>AU2</td><td>外眉上扬</td><td>眉尾提高</td><td>疑问、惊讶（轻）</td></tr><tr><td>AU4</td><td>眉降肌（皱眉）</td><td>眉头下压、眉心竖纹</td><td>愤怒、专注、痛苦</td></tr><tr><td>AU5</td><td>上眼睑上抬</td><td>眼睛睁大</td><td>惊讶、恐惧（强）</td></tr><tr><td>AU6</td><td>眼轮匝肌收紧</td><td>下眼睑上顶、眼角收</td><td><strong>真笑的核心</strong>、喜悦</td></tr><tr><td>AU7</td><td>眼睑收紧</td><td>眼变细、上下压</td><td>愤怒、轻蔑、怀疑</td></tr><tr><td>AU9</td><td>鼻皱</td><td>鼻梁起皱</td><td>厌恶</td></tr><tr><td>AU12</td><td>嘴角上扬</td><td>颧大肌拉起嘴角</td><td>笑</td></tr><tr><td>AU15</td><td>嘴角下压</td><td>降口角肌</td><td>悲伤、失落、隐忍</td></tr><tr><td>AU17</td><td>下巴上抬</td><td>颏肌发力、下巴起皱</td><td>强忍、紧张</td></tr><tr><td>AU20</td><td>唇拉伸</td><td>嘴唇左右拉长</td><td>恐惧、尴尬</td></tr><tr><td>AU25/26</td><td>张口</td><td>下颌下落</td><td>惊讶、说话</td></tr></tbody></table>
+<p><strong>组合示例</strong>（可以直接当"表情配方"用）：</p>
+<table><thead><tr><th>表情</th><th>组合</th><th>关键错拍</th></tr></thead><tbody><tr><td>真笑</td><td>AU12 + AU6</td><td>眼先 2–4 帧</td></tr><tr><td>假笑 / 客气</td><td>AU12 单独</td><td>越标准越假（这正是你要的"客气"效果）</td></tr><tr><td>惊讶（真）</td><td>AU1+2 + AU5 + AU26</td><td>眉毛先 1–2 帧，嘴最后</td></tr><tr><td>惊后回神</td><td>上述 → 迅速收回，只剩 AU2 的余韵</td><td>收回比爆发慢 3 倍</td></tr><tr><td>隐忍（杜丽娘高频）</td><td>AU4 + AU7 + AU15 + AU17</td><td>全部"半幅度"，不下到底</td></tr><tr><td>羞</td><td>AU6 微 + AU12 单侧 + 低头 + 避开视线</td><td>单侧的抬嘴角，绝不能对称</td></tr><tr><td>悲（含泪克制）</td><td>AU1 + AU15 + AU17 + 眨眼变慢</td><td>眨眼变慢是"要哭"的第一信号</td></tr></tbody></table>
+<hr>
+<h2>图证（两张教学图）</h2>
+<p><strong>图 5 · 面部 AU 地图：真笑看眼，假笑看嘴</strong> —— 7 个常用 AU 长在哪儿、各代表什么；「只动嘴的笑是假笑」一眼看懂。</p>
+<p><img alt="图5 面部 AU 地图" src="../../frames/02-acting-1-au-map.png"></p>
+<p><strong>图 6 · 三层表情的强度谱与时间尺度</strong> —— macro / subtle / micro 三条谱线并排：micro 只有 1–5 帧，一拍二会直接把它吃掉。</p>
+<p><img alt="图6 三层表情强度谱" src="../../frames/02-acting-2-layers.png"></p>
+<table><thead><tr><th>图</th><th>用来讲什么</th><th>一句话投屏解说</th></tr></thead><tbody><tr><td>图 5</td><td>眼周 vs 嘴角</td><td>「眼睛不笑，嘴角抬得再标准，也只是客气。」</td></tr><tr><td>图 6</td><td>微表情的时间尺度</td><td>「它只有 1 到 5 帧 —— 你画得出来，才叫近景。」</td></tr></tbody></table>
+<hr>
+<h2>三、微表情的时间尺度：只有 1–5 帧</h2>
+<p>这是<strong>戏曲近景表演最有用的一条技术参数</strong>：</p>
+<ul><li>微表情（micro-expression）的持续时长约 <strong>40–200 毫秒 = 1/25–1/5 秒</strong>（Ekman 系研究）。</li><li>在 <strong>24fps 下只有 1–5 帧</strong>。</li></ul>
+<p><strong>推论（直接可执行）</strong>：</p>
+<ol><li>微表情必须用<strong>一拍一</strong>画，一拍二会直接把它吃掉。</li><li>微表情需要<strong>抽帧式插入</strong>（前一帧平静，下一帧就是微表情），靠"闪一下"起效。</li><li>微表情的<strong>位置</strong>是表演的关键：放在<strong>大表情峰值前后的 2–4 帧</strong>，或放在<strong>两句台词之间的空隙</strong>。</li></ol>
+<blockquote><p><strong>杜丽娘应用</strong>：昆曲的表演是"收着的"，大表情符号（掩面、回眸）之间有大段空隙。这些空隙里如果不放微表情，近景就是"空的"——<strong>这就是"怎么努力都达不到要求"的真正位置</strong>。</p></blockquote>
+<hr>
+<h2>四、三层表情结构（强度谱）</h2>
+<table><thead><tr><th>层级</th><th>时长</th><th>特征</th><th>动画用法</th></tr></thead><tbody><tr><td><strong>宏观表情</strong> macro</td><td>0.5–4 s</td><td>完整、可辨认、可控</td><td>主表演（程式符号在此发力）</td></tr><tr><td><strong>微表情</strong> micro</td><td>40–200 ms</td><td>一闪而过、无意识泄露</td><td>1–5 帧插入（近景的"真感"来源）</td></tr><tr><td><strong>细微表情</strong> subtle</td><td>1/2–1 s</td><td>幅度极小的持续表情</td><td>半幅度、长 hold（杜丽娘的主战场）</td></tr></tbody></table>
+<p><strong>近景的黄金配比</strong>（经验值）：<strong>subtle 七成 + macro 三成 + micro 闪三到五次</strong>。</p>
+<hr>
+<h2>五、课堂练习</h2>
+<ol><li><strong>真笑/假笑对照</strong>：同一句"我没事"，画两版（AU12 单独 / AU12+AU6），让同学说出哪个是真心。</li><li><strong>1 帧插入练</strong>：在 24 帧的平静镜头里插入 1 帧微表情，测试"能不能被看见"（能，而且最动人）。</li><li><strong>单侧练</strong>：把"笑、疑"全部改画成单侧动作，对比对称版的"面具感"。</li><li><strong>AU 拆解看片</strong>：看一段《头脑特工队》近景，逐格标 AU 编号。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一镜到底（AI 版）：把长镜头拆开做，再无缝缝回去 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>一镜到底（AI 版）：把长镜头拆开做，再无缝缝回去</h1>
+<blockquote><p>✅ 实践层。<strong>核心判断</strong>：AI 不能"一次生成 20 秒还守住一致性"，但<strong>能生成 2 秒</strong>。</p><p>所以一镜到底的 AI 做法不是"一次出长镜"，而是：<strong>分段生成 → 无缝缝合 → 拼成一镜</strong>。</p><p>观众要的"不间断"是<strong>结果</strong>，不是<strong>工序</strong>。</p></blockquote>
+<hr>
+<h2>一、为什么一镜到底对 AI 最难（先接受它）</h2>
+<p>剪辑点原本是你的掩护：接不上就切一刀。一镜到底把掩护撤掉了 —— <strong>AI 的三种漂移会全部暴露</strong>： ① 角色漂移（脸／比例逐段变）② 背景漂移（布景与光向乱跳）③ 运动断裂（速度矢量在接缝处折一下）。</p>
+<p>所以一镜到底的成败<strong>不取决于抽卡次数，取决于缝法</strong>。</p>
+<hr>
+<h2>二、三种缝法（按可用性排序）</h2>
+<h3>缝法 A：尾帧接首帧（基础，必用）</h3>
+<p>上一段的<strong>最后一帧</strong>截图 → 作为下一段的<strong>首帧</strong>输入。</p>
+<ul><li>优点：接缝处画面几乎连续，最好操作。</li><li>缺点：压缩损失与漂移<strong>会累积</strong>（10 段之后脸可能不是同一个人）。</li><li>对策：每 3–4 段<strong>回锚一次</strong>（把第 1 段的定稿图重新作为参考图强灌一次）。</li></ul>
+<h3>缝法 B：重叠区交叉溶解（进阶，治"运动断裂"）</h3>
+<p>生成时让相邻两段<strong>故意重叠 8–12 帧</strong>，在重叠区做交叉溶解或光流过渡。</p>
+<ul><li>优点：运动不折，速度矢量接得上。</li><li>数值：<strong>重叠 8–12 帧</strong>（24fps ≈ 0.3–0.5 秒）；少于 6 帧看得出跳变，多于 16 帧会出现重影。</li></ul>
+<h3>缝法 C：运动骨架锚定（<strong>最可靠，推荐主力</strong>）</h3>
+<p><strong>你自己排一整段运动骨架</strong>（逐帧简笔草稿 / 火柴人 / 实拍片段），按 2 秒切片，走<strong>视频转视频</strong>只重绘风格。</p>
+<ul><li>优点：<strong>运动连续性是你给的</strong>，AI 只负责"画得像"，接缝处天然连续。</li><li>代价：骨架得你自己出 —— 但这正是原画师该干的活。</li><li><strong>本仓库推荐的主力路线</strong>：把 AI 从"创作者"降级为"上色／材质师"。</li></ul>
+<hr>
+<h2>三、四锚 + 三约束</h2>
+<p><strong>四锚</strong>（同 <a href="03-ai-video-pipeline.html">03-ai-video-pipeline.md</a>）：角色参考图 / 风格串 / 种子 / 镜头参数。一镜到底里<strong>一项都不能改</strong>。</p>
+<p><strong>镜头三约束</strong>（一镜到底专属）：</p>
+<table><thead><tr><th>约束</th><th>规则</th><th>为什么</th></tr></thead><tbody><tr><td>一段一运动</td><td>每段内只做<strong>一种</strong>镜头运动：推 / 移 / 摇，<strong>不叠加</strong></td><td>同时"环绕+变焦+跟人"必崩</td></tr><tr><td>人别大位移</td><td>人物在画面中<strong>相对静止</strong>，靠背景视差、光、前景物来"动"</td><td>AI 的脚、落地、步频是最弱项</td></tr><tr><td>光写死</td><td>光源方向、色温、时间（晨/昏）每段首帧一致</td><td>光跳变＝接缝立刻被看出来</td></tr></tbody></table>
+<hr>
+<h2>四、无缝检查（缝合后必查，一点不合格就回去补）</h2>
+<p>在<strong>每一个接缝</strong>停住逐帧看：</p>
+<ol><li><strong>曝光/色温</strong>有没有跳一下（观众最快能感觉到的）；</li><li><strong>角色轮廓</strong>（头身比、脸型、发型剪影）有没有变化；</li><li><strong>运动方向与速度</strong>（手/头/衣摆的速度矢量）有没有折一下。</li></ol>
+<blockquote><p>验收沿用 <a href="02-self-check.html">02-self-check.md</a> 的最后三件事：<strong>缩到拇指大小看 / 静音看 / 只听声音看</strong>。</p></blockquote>
+<hr>
+<h2>五、本片应用：《画中人》C7「雕刻」段（384 帧 = 8 段 × 48 帧）</h2>
+<p><strong>为什么选这一段做一镜到底</strong>：这是全片最不该让观众"缓气"的地方 —— <strong>脆桃用自己换他一个能呼吸的身体</strong>。 剪辑点会替观众喘气；一镜到底在这里不是炫技，是<strong>让你感受到代价</strong>。</p>
+<table><thead><tr><th>段</th><th>帧号</th><th>这一段唯一的目标</th><th>镜头（一段一运动）</th><th>交给 AI</th><th>自己来</th></tr></thead><tbody><tr><td>S1</td><td>0–48</td><td>脆桃看着自己的手 → 决定</td><td>缓推</td><td>光线、桃身质感</td><td><strong>决定的那 1 帧</strong></td></tr><tr><td>S2</td><td>48–96</td><td>男孩起笔，第一刀</td><td>微移</td><td>粉尘、工具材质</td><td>接触帧形变、手腕弧线</td></tr><tr><td>S3</td><td>96–144</td><td>雕刻进行；<strong>脆桃在减少</strong></td><td>小幅移</td><td>木屑氛围</td><td>体积递减（代价可视化）</td></tr><tr><td>S4</td><td>144–192</td><td>粉笔小人来帮忙</td><td>摇（横向）</td><td>群像动势</td><td>小人<strong>依次</strong>加入（错开 2–4 帧）</td></tr><tr><td>S5</td><td>192–240</td><td>书生轮廓成形</td><td>推近</td><td>材质与光</td><td>轮廓关键姿势（3–5 张）</td></tr><tr><td>S6</td><td>240–288</td><td><strong>第一次被触到</strong>（主题句视觉化）</td><td>几乎静止</td><td><strong>不要交给 AI</strong></td><td>触觉的"实"（压陷 / 回弹）</td></tr><tr><td>S7</td><td>288–336</td><td>柳郎<strong>第一次呼吸</strong>（题眼）</td><td>极缓推</td><td><strong>不要交给 AI</strong></td><td>1 帧吸气 + 呼吸周期起手</td></tr><tr><td>S8</td><td>336–384</td><td>拉远：并立（脆桃已是半个） → 转向月</td><td>缓拉</td><td>月光、云雾</td><td>结尾留"未完成感"</td></tr></tbody></table>
+<p><strong>缝合参数</strong>：段间<strong>重叠 8–12 帧</strong>交叉溶解 + <strong>每 3 段回锚一次</strong>。</p>
+<p><strong>第二处一镜到底（可选）</strong>：C10「双双化为月亮」—— 8 秒（192 帧 = 4 段），缝法用 <strong>B</strong>；气氛段允许余韵重叠。</p>
+<hr>
+<h2>六、什么时候<strong>不要</strong>做一镜到底</h2>
+<ul><li>段落里有<strong>换场/时间跳跃</strong>（一镜到底装不下时间跳跃，硬做只会假）；</li><li>段落需要<strong>两个空间的信息</strong>（观众需要休息点来消化）；</li><li>预算/排期是硬的 → 一镜到底<strong>只留给戏眼那 8–16 秒</strong>。</li></ul>
+<blockquote><p>一句话：<strong>一镜到底留给"不该让观众喘气"的那一段，其余地方让剪辑帮你。</strong></p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

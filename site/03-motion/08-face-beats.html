@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M-08 表情拍子：哭 / 笑 / 惊 / 羞 / 怒 / 忍 ⭐ · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>M-08 表情拍子：哭 / 笑 / 惊 / 羞 / 怒 / 忍 ⭐</h1>
+<blockquote><p>表情<strong>不是一张脸</strong>，是<strong>一串拍子</strong>。每个情绪都有"结构性帧表"，背下来就能用。</p><p>每个条目给出：<strong>触发 → 建立 → 峰值 → 余韵</strong>四拍。帧数按 24fps 一拍二。</p></blockquote>
+<hr>
+<h2>通用结构（所有表情都用这个骨架）</h2>
+<table><thead><tr><th>拍</th><th>帧数</th><th>内容</th></tr></thead><tbody><tr><td>① 触发延迟</td><td>4–8</td><td>不动/只呼吸（听见了）</td></tr><tr><td>② 建立</td><td>8–16</td><td>幅度上升；<strong>建立快</strong></td></tr><tr><td>③ 峰值 + hold</td><td>2–12</td><td>峰值必须 hold（这是"戏"）</td></tr><tr><td>④ 余韵/收回</td><td>16–40</td><td><strong>收回慢</strong>，且不完全回到起点</td></tr><tr><td>⑤ 微表情泄露</td><td>1–2 帧</td><td>插在②与④的<strong>缝隙</strong>里（见 <a href="../02-acting/01-microexpression-facs.html">../02-acting/01-microexpression-facs.md</a>）</td></tr></tbody></table>
+<hr>
+<h2>一、哭（三种，区别巨大）</h2>
+<table><thead><tr><th>类型</th><th>特征</th><th>帧表要点</th></tr></thead><tbody><tr><td><strong>含泪克制</strong>（杜丽娘主用）</td><td>眼不红、泪不下，只是<strong>亮</strong></td><td>眨眼变慢（间隔→5 秒）+ 下眼睑湿光 + AU17 下巴微收 + 一次深呼吸 + 视线游移</td></tr><tr><td><strong>哽咽</strong></td><td>喉动、肩动、吸气断</td><td>吸气 6–8 帧（断成 2 截）+ 肩抬 2–3 帧 + 咽下 1 帧</td></tr><tr><td><strong>痛哭</strong></td><td>面部扭曲、泪流</td><td>泪珠：拉长(2) → 脱离(1) → 坠落(3–5) → 拉丝；每滴错拍 3–5 帧</td></tr></tbody></table>
+<p><strong>泪珠画法</strong>（最常做错的零件）：下眼睑积泪（1–2 帧鼓起）→ 汇成珠（2 帧）→ <strong>被拉长成椭圆</strong>后脱离 → 下落（间距递增）→ 拉出一条细丝留在脸上。</p>
+<h2>二、笑（四种）</h2>
+<table><thead><tr><th>类型</th><th>组合</th><th>要点</th></tr></thead><tbody><tr><td>会心/浅笑</td><td>AU12 单侧 + AU6 微</td><td>单侧！<strong>对称的笑是面具</strong></td></tr><tr><td>真笑</td><td>AU12 + AU6</td><td>眼先 2–4 帧；眼睛被颊部顶起变细</td></tr><tr><td>假笑/客气</td><td>AU12 单独</td><td>这正是"客气"的视觉定义，可<strong>故意</strong>用于礼节场面</td></tr><tr><td>大笑</td><td>AU12 + AU6 + AU25 张口</td><td>用 2–3 次起伏（不是一条曲线），身体参与（肩、背）</td></tr></tbody></table>
+<h2>三、惊（两拍，绝不能只有一拍）</h2>
+<table><thead><tr><th>拍</th><th>内容</th></tr></thead><tbody><tr><td>第 1 拍（惊）</td><td>AU1+2 + AU5 + 吸气半口 + <strong>身体先僵</strong>（0.2 秒）</td></tr><tr><td>第 2 拍（回神）</td><td>收回，只剩眉尾一点余韵；<strong>收回比惊慢 3 倍</strong></td></tr></tbody></table>
+<p><strong>错误</strong>：只画"惊"不画"回神" → 变成一张定格表情，没有"活"。 <strong>戏曲版</strong>：惊常用"后退半步 + 袖微抬 + 眼瞪"（程式化），幅度比迪士尼小，但<strong>hold 更长</strong>（6–10 帧）。</p>
+<h2>四、羞（戏曲最核心的表情）</h2>
+<table><thead><tr><th>手法</th><th>说明</th></tr></thead><tbody><tr><td><strong>遮</strong></td><td>袖/扇/帕遮面（见 <a href="07-props.html">M-07</a>）→ 停 → 露眼</td></tr><tr><td>低头</td><td>头低 30–50%，<strong>下巴微收</strong>；眼从下方看上来</td></tr><tr><td>颊红</td><td><strong>色指定层</strong>的活儿：颊部淡红渐显 8–16 帧（不要突然出现）</td></tr><tr><td>单侧嘴角</td><td>1–2 帧，幅度极小</td></tr><tr><td>呼吸变化</td><td>一次短促吸气 + 停</td></tr><tr><td>视线</td><td>先看 → 立刻避开（1–2 帧）→ 再看 → 再避（两次循环即"心动"）</td></tr></tbody></table>
+<blockquote><p><strong>羞的技术难点</strong>：它不是"一个动作"，而是<strong>"看—避"的一组往复</strong>。只做一次避视 = 呆；做两次 = 羞；做三次以上 = 撒娇。</p></blockquote>
+<h2>五、怒 / 忍（戏曲人物的高频状态）</h2>
+<table><thead><tr><th>情绪</th><th>组合</th><th>幅度</th></tr></thead><tbody><tr><td>怒</td><td>AU4 + AU7 + AU17 + 身体前倾</td><td>戏曲版幅度 40–60%，配"甩袖/怒视"</td></tr><tr><td><strong>忍</strong>（最有用）</td><td>AU4 半 + AU7 半 + AU15 + AU17</td><td>全部<strong>半幅度 + 长时间 hold</strong>（12–24 帧），靠呼吸与喉动维持</td></tr><tr><td>惊怒</td><td>惊的 1 帧 → 立刻转怒（2–4 帧内切换）</td><td>转换速度决定"性格"</td></tr><tr><td>悲愤</td><td>AU1 + AU15 + 眨眼变慢 + 手攥</td><td>手是情绪出口（攥紧 2–4 帧）</td></tr></tbody></table>
+<h2>六、常见错误汇总</h2>
+<table><thead><tr><th>错误</th><th>症状</th></tr></thead><tbody><tr><td>只有"建立"没有"收回"</td><td>表情僵在半空</td></tr><tr><td>峰值不 hold</td><td>表演被腰斩</td></tr><tr><td>对称</td><td>面具感</td></tr><tr><td>只动嘴</td><td>假</td></tr><tr><td>幅度 100% 用满</td><td>油；戏曲尤其忌</td></tr><tr><td>情绪切换在 1 帧内</td><td>抽搐</td></tr><tr><td>忘呼吸</td><td>死</td></tr></tbody></table>
+<h2>七、课堂练习</h2>
+<ol><li><strong>四拍骨架</strong>：任意情绪都写成四拍表再画。</li><li><strong>羞的往复</strong>：做"看—避"1 次 / 2 次 / 3 次三版，判断情绪差别。</li><li><strong>含泪不流泪</strong>：只画眼睛，不许出现泪珠，让同学读情绪。</li><li><strong>忍的 hold</strong>：24 帧里只有呼吸与一次喉动，其余保持。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01 原画原理 · 模块导览 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>01 原画原理 · 模块导览</h1>
+<blockquote><p>「原画」（key animation）不是"画得好看的关键帧"，而是<strong>在一段动作里做出决策的那几帧</strong>：力从哪里起、哪里断开、哪里慢、哪里快、哪里停顿。</p></blockquote>
+<table><thead><tr><th>文件</th><th>内容</th><th>一句话</th></tr></thead><tbody><tr><td><a href="01-twelve-principles.html">01-twelve-principles.md</a></td><td>迪士尼十二法则·原画操作版</td><td>十二法则不是教条，是 1920–40 年代实践的<strong>归纳</strong>（1981 年才被写下来）</td></tr><tr><td><a href="02-motion-laws.html">02-motion-laws.md</a></td><td>动作规律十二条</td><td>力的传递：起势—动势—收势，主动作与从动作</td></tr><tr><td><a href="03-timing-spacing.html">03-timing-spacing.md</a></td><td>时间与间距 · 摄影表</td><td><strong>时间 = 帧数，间距 = 同一动作在两帧之间走了多远</strong>。这两件事分开调，节奏才有层次</td></tr><tr><td><a href="04-frame-recipes.html">04-frame-recipes.md</a></td><td>帧数配方表</td><td>走/跑/转/跳/落的经验帧数区间（24fps，标注一拍二/三）</td></tr><tr><td><a href="05-silhouette-line.html">05-silhouette-line.md</a></td><td>剪影、张力线与造型</td><td>关掉颜色和细节，只看黑剪影能否读懂动作</td></tr><tr><td><a href="06-drawing-order.html">06-drawing-order.md</a></td><td>作画顺序与层结构</td><td>从中心线、体块到衣纹的落笔次序（决定能不能改）</td></tr><tr><td><a href="07-clinic.html">07-clinic.md</a></td><td><strong>原画门诊：症状 → 处方</strong></td><td><strong>对着回放找症状，按表格拧旋钮 —— 实践层入口，先看这页</strong></td></tr></tbody></table>
+<hr>
+<h2>三层分工（先把词理清，很多"做不出来"其实是分工错位）</h2>
+<table><thead><tr><th>层</th><th>日语/英语</th><th>干什么</th><th>判断标准</th></tr></thead><tbody><tr><td><strong>原画</strong></td><td>原画 / key animation</td><td>决定表演、姿势、时机、力的走向；画关键姿势与"作画指示"</td><td>只看原画抽出，动作是否<strong>已经成立</strong></td></tr><tr><td><strong>中间画</strong></td><td>動画（どうが）/ inbetween</td><td>按原画指示补足帧，保持体积与线条</td><td>有无"滚线"、体积是否守恒</td></tr><tr><td><strong>作画监督 / 演出</strong></td><td>作監 / 演出</td><td>统一造型与表演意图、修正</td><td>全片是否像一个"人"画的</td></tr></tbody></table>
+<p><strong>关键判断</strong>：一个动作"努力也达不到要求"，九成不是中间画不够多，而是<strong>原画阶段没有把"力的走向"和"时机分配"定死</strong>。加帧只会让平庸的动作变长。</p>
+<hr>
+<h2>课堂讲法（30 分钟一节课的常用切法）</h2>
+<ol><li>先放一段好动作（建议用 04 sakuga 里的挑选标准选片），<strong>静音</strong>看一遍 → 学生说出"力从哪来、到哪去"。</li><li>逐格看 3 秒 → 数出<strong>关键姿势有几个</strong>，间距是均匀还是渐变。</li><li>让学生用自己的角色重画这 3 秒，只准画关键姿势，不准画中间画。</li><li>交换互看剪影（涂黑），判断谁的动作能用剪影读懂。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

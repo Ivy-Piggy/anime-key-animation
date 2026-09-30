@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>作画顺序与层结构（决定"能不能改"） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>作画顺序与层结构（决定"能不能改"）</h1>
+<blockquote><p>✅ 经验层。这一页不是美学问题，是<strong>工程问题</strong>：画的次序决定了你后面能不能改、中割好不好补、作监好不好修。</p></blockquote>
+<hr>
+<h2>一、单张原画的落笔次序</h2>
+<pre><code>① 构图框 / 视平线（先定镜头）
+② 张力线（一条线定全身的力）
+③ 头部位置与朝向（近景表演：先定眼的位置）
+④ 胸腔—骨盆两块体块（倾斜方向相反 = 子午相）
+⑤ 四肢的"端点"先定（手要放哪、脚踩在哪）
+⑥ 关节与连接（不是描线，是"接上"）
+⑦ 服装、水袖、头发的**附着点**（先定从哪长出来）
+⑧ 五官（最后画，因为表情服务于①–⑦）</code></pre>
+<p><strong>为什么是这个次序</strong>：改动的代价从下往上指数上升。①–③改一笔＝重画整张；⑧改一笔＝擦掉重画五官。所以<strong>先把贵的定死</strong>。</p>
+<hr>
+<h2>二、层结构（含 2D/3D 通用的分工）</h2>
+<table><thead><tr><th>层</th><th>内容</th><th>谁负责</th><th>备注</th></tr></thead><tbody><tr><td>背景 / 背动（BG）</td><td>背景、背景动画</td><td>美术</td><td>背动 = 用背景移动表达镜头运动（日语 <strong>背動 haidō</strong>）</td></tr><tr><td>A 层</td><td>角色主体（身体）</td><td>原画/中割</td><td>大多数镜头的主体层</td></tr><tr><td>B 层</td><td>附属物（袖子、头发、道具、飘带）</td><td>原画/中割</td><td><strong>必须与 A 层分开</strong>，否则无法做"跟随重叠"</td></tr><tr><td>C 层</td><td>前景遮挡（落叶、栏杆、帘子）</td><td>美术/特效</td><td>增加空间层次与遮挡表演</td></tr><tr><td>特效层</td><td>烟、火、水、光、花瓣</td><td>特效原画</td><td>独立画法（见 <a href="../03-motion/10-fx.html">../03-motion/10-fx.md</a>）</td></tr><tr><td>摄影/合成</td><td>光效、色指定、虚焦、叠影</td><td>摄影</td><td>二次创作空间很大</td></tr></tbody></table>
+<p><strong>常见错误</strong>：把水袖画进主体 A 层 → 主体一停袖子也只能停 → "布料感"永远做不出来。<strong>水袖必须独立成层</strong>。</p>
+<hr>
+<h2>三、原画指示（作画指示）该写什么</h2>
+<p>一段好原画，纸上除了画，还要有这些注记（中割看得懂才是好原画）：</p>
+<ol><li><strong>打数</strong>（一拍二/三、哪几张是 hold）</li><li><strong>形变方向</strong>（A→B 是"旋"还是"移"，画箭头）</li><li><strong>边界</strong>（哪部分是"要跟"的：袖、发、裙）</li><li><strong>意图词</strong>（"眼神先到""先停再动"）</li><li><strong>摄影提示</strong>（需要什么光、是否叠影、是否要模糊）</li></ol>
+<hr>
+<h2>四、近景表演的层分工（杜丽娘这类戏的关键）</h2>
+<p>一个 3–5 秒的近景，建议至少拆成：</p>
+<table><thead><tr><th>层/部件</th><th>独立运动</th><th>不与主体同步的理由</th></tr></thead><tbody><tr><td>眼睛（瞳孔/眼皮）</td><td>独立</td><td>视线比头更快到；眨眼节奏与情绪绑定</td></tr><tr><td>眉毛</td><td>半独立</td><td>眉眼不同时动（先眉后眼 = 思考；先眼后眉 = 情感冲击）</td></tr><tr><td>呼吸（胸腹）</td><td>独立循环</td><td>静止镜头里唯一的"活着"的证据</td></tr><tr><td>头/发饰</td><td>跟随</td><td>头动完，步摇/簪饰才晃</td></tr><tr><td>手/袖</td><td>跟随</td><td>手的动作比意识慢半拍更真实</td></tr><tr><td>嘴唇</td><td>独立</td><td>口型与呼吸、与眼神是三条不同时钟</td></tr></tbody></table>
+<blockquote><p><strong>近景表演做不好的根因，往往是把这六件东西当成一件在动。</strong> 详见 <a href="../02-acting/02-closeup-acting.html">../02-acting/02-closeup-acting.md</a>。</p></blockquote>
+<hr>
+<h2>五、课堂练习</h2>
+<ol><li><strong>次序实验</strong>：故意先画五官再画身体，与按正确次序画，记录各自重画次数。</li><li><strong>分层拆解</strong>：找一段好近景，逐层写下"如果我是原画，我会拆成几层"。</li><li><strong>作画指示练习</strong>：把自己的作业交给同学当"中割"，看对方能否按你的注记补出正确中间画。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

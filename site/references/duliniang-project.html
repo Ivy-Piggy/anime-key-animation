@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>项目档案：杜丽娘（《牡丹亭·游园惊梦》）动画 —— 诊断与推演 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>项目档案：杜丽娘（《牡丹亭·游园惊梦》）动画 —— 诊断与推演</h1>
+<blockquote><p>这是本库的<strong>起点问题档案</strong>。所有模块都是为它服务的；所有结论都往这里回填。 ⚠️ 涉及具体版本/演出的信息请核验。</p></blockquote>
+<hr>
+<h2>一、问题陈述</h2>
+<table><thead><tr><th>项</th><th>内容</th></tr></thead><tbody><tr><td>角色</td><td>杜丽娘（昆曲《牡丹亭》主角；行当为<strong>闺门旦</strong>，端庄含蓄 ⚠️）</td></tr><tr><td>段落</td><td>以「游园惊梦」为核心（曲牌如【步步娇】【皂罗袍】等 ⚠️ 以所用版本为准）</td></tr><tr><td>症状</td><td><strong>微表情与近景表演"怎么努力都达不到要求"</strong></td></tr><tr><td>现状判断</td><td>学的是迪士尼/皮克斯风格，但<strong>原画原理（间距/节奏/表演层）未打底</strong></td></tr></tbody></table>
+<hr>
+<h2>二、根因诊断（按可能性排序）</h2>
+<table><thead><tr><th>#</th><th>根因</th><th>证据/表现</th><th>对应解法</th></tr></thead><tbody><tr><td>1</td><td><strong>只有一条时钟</strong></td><td>眼、眨眼、呼吸、头、手、嘴 被当成一件东西在动</td><td><a href="../02-acting/02-closeup-acting.html">02-acting/02</a> 六条时钟</td></tr><tr><td>2</td><td><strong>没有反应延迟</strong></td><td>一听到/看到就立刻反应 → 假</td><td>延迟 4–8 帧</td></tr><tr><td>3</td><td><strong>没有呼吸</strong></td><td>静止帧像照片</td><td>24–36 帧循环呼吸层</td></tr><tr><td>4</td><td><strong>表情靠嘴</strong></td><td>只动嘴/只动五官，眼周与鼻唇沟不动</td><td><a href="../02-acting/01-microexpression-facs.html">02-acting/01</a> AU6/AU12</td></tr><tr><td>5</td><td><strong>尺度错位</strong></td><td>用迪士尼 100% 幅度演戏曲 → "油"</td><td>幅度降到 40–60%</td></tr><tr><td>6</td><td><strong>时间骨架错</strong></td><td>时间按物理走，没跟板眼 → 与唱腔脱节</td><td>板眼=摄影表</td></tr><tr><td>7</td><td><strong>不敢停</strong></td><td>峰值不 hold，一到就切</td><td>hold 6–12 帧</td></tr><tr><td>8</td><td><strong>布料没独立</strong></td><td>水袖与身体同步 → 无"气"</td><td>独立层 + 滞后 4–12 帧</td></tr></tbody></table>
+<p><strong>最关键的一条</strong>：<strong>原因 1 与原因 4</strong>。此前"努力"很可能全花在"把五官画得更细"，而<strong>眼周、呼吸、错拍</strong>从未被设计过。</p>
+<hr>
+<h2>三、正解：双轨法（本项目的核心技术路线）</h2>
+<blockquote><p>完整论述见 <a href="../02-acting/06-opera-translation.html">02-acting/06-opera-translation.md</a>。</p></blockquote>
+<pre><code>轨道 A｜程式大拍（落在"板"上）  ：身段、水袖、回眸、亮相——给结构与"戏曲味"
+轨道 B｜生物小拍（填在缝隙里）  ：呼吸、眨眼、喉动、颊红、眼周、瞳孔——给"真"</code></pre>
+<p><strong>一句话</strong>：<strong>平台上让程式说话，缝隙里让身体说话。</strong></p>
+<hr>
+<h2>四、昆曲的时间骨架：板眼 → 摄影表</h2>
+<table><thead><tr><th>概念</th><th>含义</th><th>转为动画参数</th></tr></thead><tbody><tr><td>一板三眼</td><td>4/4 拍（一小节四拍，头一拍为"板"）</td><td>一小节 = 4 个关键格；板 = 强拍</td></tr><tr><td>一板一眼</td><td>2/4 拍</td><td>小节更短，节奏更紧</td></tr><tr><td>赠板</td><td>加花慢唱（8/4）</td><td>拖腔段：<strong>动作要减，不能加</strong></td></tr><tr><td>散板</td><td>自由节拍</td><td>呼吸、眼神游移的<strong>最佳空档</strong></td></tr></tbody></table>
+<p><strong>操作步骤</strong>：</p>
+<ol><li>放录音，按拍手数板眼，记下每"板"的时间码。</li><li>时间码 × 24 → 帧号，写进摄影表当关键帧。</li><li><strong>身段高峰必须落在板上</strong>；弱拍（眼）与散板段留给微表情。</li><li>起稿时先写"板眼行"，再写"动作行"。</li></ol>
+<p>⚠️ 具体曲牌的板式与速度以你所用版本/录音为准；数板眼必须<strong>听录音数</strong>，不要凭记忆。</p>
+<hr>
+<h2>五、四镜推演（可直接试用，参数需按片子调）</h2>
+<table><thead><tr><th>镜头</th><th>景别</th><th>程式大拍（落板）</th><th>生物小拍（缝隙）</th><th>帧数建议</th></tr></thead><tbody><tr><td>① 推窗见春</td><td>中近景</td><td>推窗 → 侧身 → 亮相</td><td>指触窗框的"轻顿"；睫毛一颤；呼吸</td><td>72 帧（3 s）</td></tr><tr><td>② 见花惊春</td><td>近景</td><td>抬头、眼一亮（程式"惊"）</td><td>眼先 2 帧 → 头后到；1 帧吸气；瞳孔微放</td><td>60 帧</td></tr><tr><td>③ 羞而低头</td><td>近景</td><td>水袖掩面（8 帧）→ 低头 60%</td><td>单侧嘴角；喉动 1 帧；颊红渐显 16 帧</td><td>72 帧</td></tr><tr><td>④ 惆怅空望</td><td>近景（长）</td><td>回眸 → 垂手 → 微低头</td><td><strong>12 帧 hold 里：呼吸 + 眨眼变慢 + 1 帧微表情泄露</strong></td><td>96 帧</td></tr></tbody></table>
+<p><strong>镜头④是戏眼</strong>：程式给结构，微表情给灵魂。这一镜做对了，全片就立住了。</p>
+<hr>
+<h2>六、参数建议（本项目初版，抄进"表演方针书"）</h2>
+<table><thead><tr><th>参数</th><th>建议值</th></tr></thead><tbody><tr><td>大表情幅度</td><td>40–60%</td></tr><tr><td>微表情</td><td>1–5 帧，幅度 10–20%</td></tr><tr><td>表情建立 : 收回</td><td>1 : 2.5（如 16 : 40）</td></tr><tr><td>hold 占比</td><td>30–40%</td></tr><tr><td>亮相时长</td><td>6–12 帧</td></tr><tr><td>呼吸周期</td><td>24–36 帧，永不停止</td></tr><tr><td>布料滞后</td><td>4–12 帧，余波 2–3 次</td></tr><tr><td>近景时长</td><td>全景 × 1.5–2</td></tr><tr><td>打数</td><td>关键帧一拍一，其余一拍二；拖腔可一拍三</td></tr></tbody></table>
+<hr>
+<h2>七、待办与素材</h2>
+<ul><li>☐ 找 2 部戏曲题材动画（老片 + 当代）逐格看近景与唱段（见 <a href="../05-china/03-opera-animation.html">05-china/03</a>）</li><li>☐ 数一段昆曲曲牌的板眼，做一张"板眼帧表"</li><li>☐ 做一次"六条时钟"拆解（用自己已有的镜头）</li><li>☐ 按 <a href="../06-workflow/02-self-check.html">06-workflow/02-self-check.md</a> 全面自检并列出三件要改的事</li><li>☐ 建"程式动作词汇表"（本片只用 3–5 个程式动作）</li><li>☐ 引用核验：戏曲动画先例的原画/创作人员归属（记入 <a href="sourcing-log.html">sourcing-log.md</a>）</li></ul>
+<hr>
+<h2>八、学术接口（可与你的研究方向对接）</h2>
+<table><thead><tr><th>接口</th><th>说明</th><th>可用话语</th></tr></thead><tbody><tr><td><strong>程式动作的连续帧转译</strong></td><td>"戏曲程式如何转成动画的连续运动"是本项目的核心命题</td><td>可与"原画/动作规律"体系对话</td></tr><tr><td><strong>技术—表演的关系</strong></td><td>同一段戏在"舞台—实拍—动画"三种媒介中的表演差异</td><td>可与表演学/媒介理论对话</td></tr><tr><td><strong>板眼作为时间算法</strong></td><td>音乐节拍作为动画节奏的生成规则</td><td>可与其他"节奏驱动型"动画比较</td></tr><tr><td><strong>AI 与程式</strong></td><td>程式本身高度可编码 → 与"AI 能否生成程式动作"直接相关</td><td>与你的 AI 审美研究方向天然衔接</td></tr></tbody></table>
+<blockquote><p>本页会随项目推进持续更新。</p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

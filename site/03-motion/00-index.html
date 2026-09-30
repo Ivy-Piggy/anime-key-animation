@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>03 连续动作分类库 · 总表与入口 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>03 连续动作分类库 · 总表与入口</h1>
+<blockquote><p><strong>这个模块是"动作字典"。</strong> 每个条目一条动作，编号 <code>M-xx</code>，统一格式，可随时扩充。</p><p>目标：遇到任何动作，都能在这里找到 <strong>阶段拆解 + 帧数配方 + 关键姿势清单 + 常见错误</strong>。</p></blockquote>
+<hr>
+<h2>一、条目编号体系</h2>
+<table><thead><tr><th>编号</th><th>条目</th><th>文件</th><th>子类</th></tr></thead><tbody><tr><td>M-01</td><td>走（含云步、圆场、台步）</td><td><a href="01-walk.html">01-walk.md</a></td><td>位移·基础</td></tr><tr><td>M-02</td><td>跑与追逐</td><td><a href="02-run.html">02-run.md</a></td><td>位移·基础</td></tr><tr><td>M-03</td><td>转身与回眸</td><td><a href="03-turn-glance.html">03-turn-glance.md</a></td><td>位移·转向</td></tr><tr><td>M-04</td><td>跳与落地</td><td><a href="04-jump-land.html">04-jump-land.md</a></td><td>位移·垂直</td></tr><tr><td>M-05</td><td>打斗与动作戏</td><td><a href="05-fight.html">05-fight.md</a></td><td>力·对抗</td></tr><tr><td>M-06</td><td>衣纹、水袖、头发、裙摆</td><td><a href="06-cloth-hair-sleeve.html">06-cloth-hair-sleeve.md</a></td><td>布料·跟随 ⭐</td></tr><tr><td>M-07</td><td>道具：扇、袖、花、伞、帕</td><td><a href="07-props.html">07-props.md</a></td><td>道具·交互 ⭐</td></tr><tr><td>M-08</td><td>表情拍子：哭/笑/惊/羞/怒/忍</td><td><a href="08-face-beats.html">08-face-beats.md</a></td><td>表演·表情 ⭐</td></tr><tr><td>M-09</td><td>群戏与场面调度</td><td><a href="09-group.html">09-group.md</a></td><td>空间·群体</td></tr><tr><td>M-10</td><td>特效：烟/火/水/光/花瓣</td><td><a href="10-fx.html">10-fx.md</a></td><td>特效·自然物</td></tr><tr><td>—</td><td>🔎 待补：骑马、坐卧起身、负重、受伤、晕倒、梳妆、执笔、弹琴</td><td>—</td><td>—</td></tr></tbody></table>
+<p>⭐ = 戏曲动画最高频、最该先做的三条。</p>
+<hr>
+<h2>二、每条的统一格式</h2>
+<pre><code>① 一句话定义
+② 阶段拆解表（阶段 / 帧数 / 要点）
+③ 关键姿势清单（该画哪几张原画，怎么数）
+④ 常见错误
+⑤ 戏曲 / 民族风格调整
+⑥ 参考片例（⚠️ 镜头归属需核对，见各条的核验提示）
+⑦ 课堂练习</code></pre>
+<blockquote><p><strong>开工前先出"施工单"</strong>：每条动作按 <a href="../06-workflow/05-motion-breakdown.html">../06-workflow/05-motion-breakdown.md</a> 填一张（意图句 / 三段帧数 / 关键姿势 / 摄影表 / 自查），填完再动笔 —— 这是"流程化做动画"的起点。</p></blockquote>
+<hr>
+<h2>三、怎么用（30 秒决策）</h2>
+<ol><li><strong>先判断动作类型</strong>：位移？力？布料？表演？</li><li><strong>进对应条目</strong>，照"阶段拆解表"排帧。</li><li><strong>数关键姿势</strong>：一段动作的"关键姿势"通常 3–6 个，超过 8 个说明你没在做取舍。</li><li><strong>用摄影表落定</strong>（见 <a href="../01-principles/03-timing-spacing.html">../01-principles/03-timing-spacing.md</a>）。</li><li><strong>自查</strong>：剪影测试（<a href="../01-principles/05-silhouette-line.html">../01-principles/05-silhouette-line.md</a>）+ 六条时钟（<a href="../02-acting/02-closeup-acting.html">../02-acting/02-closeup-acting.md</a>）。</li></ol>
+<hr>
+<h2>四、收集方法学：怎么"积累连续动作"（给持续扩充用）</h2>
+<p>你要的"收集连续动作并分类"，建议按这个流程固定下来：</p>
+<table><thead><tr><th>步</th><th>做什么</th><th>产出</th></tr></thead><tbody><tr><td>1</td><td>找到片段（B站/YouTube/蓝光；sakugabooru 按标签检索）</td><td>视频片段 + 时间码</td></tr><tr><td>2</td><td>逐格导出（ffmpeg/剪辑软件逐帧）</td><td>帧序列图（另存到本项目 <code>frames/</code> 或本地）</td></tr><tr><td>3</td><td>数关键姿势，写阶段拆解</td><td>一条 M-xx 条目的"阶段表"</td></tr><tr><td>4</td><td>反推帧数（数帧 / 看打数）</td><td>帧数配方（可补充到 <a href="../01-principles/04-frame-recipes.html">../01-principles/04-frame-recipes.md</a>）</td></tr><tr><td>5</td><td>归类进 M-xx，补"戏曲调整"与"课堂练习"</td><td>更新条目</td></tr><tr><td>6</td><td>记核验状态（⚠️ 引用前查 sakugabooru）</td><td>更新 <a href="../references/sourcing-log.html">../references/sourcing-log.md</a></td></tr></tbody></table>
+<blockquote><p><strong>不要只存视频</strong>。存视频是"收藏"，<strong>写出阶段拆解才是"资料"</strong>——前者会烂在硬盘里，后者能进课堂、进论文。</p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

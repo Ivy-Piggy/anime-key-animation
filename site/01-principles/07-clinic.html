@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>原画门诊 · 症状 → 处方（实践问题导向） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>原画门诊 · 症状 → 处方（实践问题导向）</h1>
+<blockquote><p>✅ 实践层。原理层回答「力怎么走」（<a href="02-motion-laws.html">02-motion-laws.md</a>），<strong>这一页回答「我这段为什么不好看、改哪里」</strong>。</p><p><strong>用法</strong>：看回放 → 在「症状」栏里找最像的一条 → 按处方拧旋钮 → 用「验证」栏确认改对了。</p><p><strong>一条铁律</strong>：动作的问题九成出在 <strong>时间、间距、形变</strong> 这三个旋钮上，不在造型上。加帧、重画造型、加特效，都救不了一个错的间距。</p></blockquote>
+<hr>
+<h2>三句话带走</h2>
+<ol><li><strong>动画不是画动作，是画力的传递。</strong>「蓄力 → 惯性 → 重量感 → 弧线」不是四条并列的规则，是同一条力链上的<strong>四个工位</strong>。</li><li><strong>动作不对，先拧旋钮，再谈画技。</strong> 帧数、间距、形变 —— 这三个旋钮没拧过，重画十遍也一样。</li><li><strong>物理只保证「对」，这四个工位决定「像人」。</strong> 物理正确是底线，表演个性全在工位之间的取舍里。</li></ol>
+<hr>
+<h2>一、四个工位：一条力链，四个观察位置</h2>
+<pre><code>   ① 蓄力          ② 惯性          ③ 重量感        ④ 弧线
+  力从哪来   ──▶   力往哪去   ──▶  力有多大   ──▶  力怎么走
+  ┌────────┐      ┌────────┐      ┌────────┐     ┌────────┐
+  │反向幅度│      │时间差  │      │帧数·间距│     │弯曲半径│
+  │＋时长  │      │（错开）│      │·形变    │     │        │
+  └────────┘      └────────┘      └────────┘     └────────┘
+       ▲                                              │
+       └──────── 表演的个性全在这四格里 ──────────────┘
+              （物理只管「对」，这四格管「像人」）</code></pre>
+<table><thead><tr><th>工位</th><th>回答什么</th><th>可操作旋钮</th><th>口诀</th><th>详解在</th></tr></thead><tbody><tr><td>① <strong>蓄力</strong>&lt;br&gt;预备动作</td><td>力从哪来</td><td>反向的<strong>幅度 + 时长</strong></td><td><strong>要往右，先往左；要往高，先蹲低</strong></td><td><a href="02-motion-laws.html">02-motion-laws</a> 三段式 · <a href="01-twelve-principles.html">01-twelve-principles</a> 法则 2</td></tr><tr><td>② <strong>惯性</strong>&lt;br&gt;跟随与重叠</td><td>力往哪去</td><td>主体与附件的<strong>时间差</strong></td><td><strong>主体先停，附件后停</strong></td><td><a href="02-motion-laws.html">02-motion-laws</a> 规律 7 · <a href="../03-motion/06-cloth-hair-sleeve.html">03-motion/06</a></td></tr><tr><td>③ <strong>重量感</strong></td><td>力有多大</td><td><strong>帧数 × 间距 × 形变</strong>（三旋钮）</td><td><strong>先有形变，才有位移</strong></td><td><a href="03-timing-spacing.html">03-timing-spacing</a> · <a href="04-frame-recipes.html">04-frame-recipes</a></td></tr><tr><td>④ <strong>动作弧线</strong></td><td>力怎么走</td><td>轨迹的<strong>弯曲半径</strong></td><td><strong>关节是轴，弧线是关节的走法</strong></td><td><a href="02-motion-laws.html">02-motion-laws</a> 规律 6 · <a href="01-twelve-principles.html">01-twelve-principles</a> 法则 7</td></tr></tbody></table>
+<blockquote><p><strong>重量的三个旋钮</strong>（记住这张表，比记十条规律有用）：</p><p>| 旋钮 | 轻 | 重 |</p><p>|------|-----|-----|</p><p>| 帧数 | 少 | 多（且<strong>不均匀</strong>） |</p><p>| 间距 | 密而匀 | 两端密、中段疏（慢起—突快—缓收） |</p><p>| 形变 | 几乎无 | 接触帧明显压扁、离地帧拉长 |</p><p><strong>学生画不出重量，九成是只改了造型（画得"笨重"），三个旋钮一个没动。</strong></p></blockquote>
+<hr>
+<h2>二、图证（四张教学图，可直接投屏）</h2>
+<p>全部为<strong>原创示意图</strong>：参数按本页表格生成，不含任何影片帧 —— 可自由用于课堂、可公开、可改数值重绘（脚本见 <a href="../frames/README.html">../frames/README.md</a>）。</p>
+<p><strong>图 1 · 间距：时间相同，间距不同</strong> —— 都是 12 帧走完这段位移，帧数没变，点的疏密变了，重量就变了。</p>
+<p><img alt="图1 间距三版对比：匀速／缓入缓出／缓入后急停" src="../../frames/07-clinic-1-spacing.png"></p>
+<p><strong>图 2 · 弧线：关节是轴</strong> —— 同一个起点与终点，直线像连杆，弧线才像有关节。</p>
+<p><img alt="图2 直线 vs 弧线，轨迹连点" src="../../frames/07-clinic-2-arc.png"></p>
+<p><strong>图 3 · 惯性：主体先停，附件后停</strong> —— 三个部件同帧停像纸板，依次停才有肉。</p>
+<p><img alt="图3 跟随重叠的起停时序：同时停 vs 依次停" src="../../frames/07-clinic-3-follow.png"></p>
+<p><strong>图 4 · 蓄力：反向预备</strong> —— 位置—时间曲线里那段"先往下"，就是力的起跑线。</p>
+<p><img alt="图4 蓄力：无预备／预备2帧／预备6帧 的位置-时间曲线" src="../../frames/07-clinic-4-anticipation.png"></p>
+<table><thead><tr><th>图</th><th>用来讲哪个工位</th><th>一句话投屏解说</th></tr></thead><tbody><tr><td>图 1</td><td>③ 重量感</td><td>「帧数一样，为什么这版更重？因为间距不一样。」</td></tr><tr><td>图 2</td><td>④ 弧线</td><td>「连点成线，凡直线处就是要改的地方。」</td></tr><tr><td>图 3</td><td>② 惯性</td><td>「一起停，就是纸板；依次停，才有肉。」</td></tr><tr><td>图 4</td><td>① 蓄力</td><td>「先反着走一点点，动作才是自己动的。」</td></tr></tbody></table>
+<hr>
+<h2>三、门诊表（主表：对着回放找症状）</h2>
+<table><thead><tr><th>症状（回放里看到的）</th><th>病因（哪个工位）</th><th>处方（具体怎么改）</th><th>验证（怎么确认改对了）</th></tr></thead><tbody><tr><td>轻飘飘、像纸片；落地没有「沉」一下</td><td>③ 重量感</td><td>① 接触帧压扁 2–3 帧、离地帧拉长；② 间距改成「慢起—突快—缓收」；③ 落地加 1–2 次递减反弹（幅度约 40% → 15%）</td><td>涂黑看剪影：落地读得出「沉」吗；落地后有没有 1–2 帧的「定」</td></tr><tr><td>像机器人 / 塑料模型</td><td>④ 弧线 + 间距匀速</td><td>① 把四肢末端的轨迹逐帧连点，凡直线改弧；② 间距两端密、中段疏</td><td>把轨迹点连成线，应是弧/抛物线，不是折线</td></tr><tr><td>说动就动，没有气势（"被拽走的"）</td><td>① 蓄力</td><td>反向预备 <strong>2–6 帧</strong>（幅度 10–20%）；要炸的戏改用 <strong>タメ hold 6–12 帧</strong></td><td>截起势前那一帧给同学看，能不能说出"她要往哪动"</td></tr><tr><td>一停就死 / 像被定住 / 收尾像贴图</td><td>② 惯性</td><td>附件<strong>依次</strong>停：躯干 → 袖 → 发，各错开 <strong>2–4 帧</strong>；停稳后留 1 次余波</td><td>最后一帧里，<strong>是否还有一件东西在动</strong></td></tr><tr><td>打上去没劲、没有反作用力</td><td>③④</td><td>接触帧加形变；打完的手/兵器<strong>回弹 2–3 帧</strong></td><td>打完那只手有没有「回一点」</td></tr><tr><td>幅度都用满了，反而假、反而吵</td><td>①（过量）</td><td>戏曲/近景：幅度压到 <strong>40–60%</strong>，把夸张挪到<strong>节奏与轨迹</strong>上（幅度不变，快慢对比拉大）</td><td>幅度是否只在该"大"的那一拍用满</td></tr><tr><td>循环动作（走/跑）越看越别扭</td><td>③</td><td>一个循环内做<strong>节奏不均</strong>：不是 24 帧平均分，而是「快—慢—极快—顿」</td><td>逐格看间距，是否每两帧都一样远</td></tr></tbody></table>
+<blockquote><p>上表里凡是标「②/③/④」的处方，都能在 <a href="../06-workflow/02-self-check.html">06-workflow/02-self-check.md</a> 的层面 2（动作与节奏 9 项）里逐条打钩复核。</p></blockquote>
+<hr>
+<h2>四、四个工位的课堂讲法（各 5 分钟）</h2>
+<table><thead><tr><th>工位</th><th>一句话定义（板书用）</th><th>学生必踩的坑</th><th>课堂正反例（当场演示）</th></tr></thead><tbody><tr><td>① 蓄力</td><td>蓄力不是「停一下」，是<strong>方向相反、幅度更小、时间更短</strong>的力</td><td>预备做得和主动作同向 → 变成"分两次做"</td><td>抬右手：只抬 vs 先微微下压 3 帧再抬 —— 后者"自己动的"</td></tr><tr><td>② 惯性</td><td>力没有开关，只有<strong>衰减</strong>；主体的力会「漏」到附件上</td><td>所有部件同时起、同时停 → 整块纸板</td><td>同一段停住：所有部件同帧停 vs 袖/发依次停</td></tr><tr><td>③ 重量感</td><td>重量不是画得笨重，是<strong>时间、间距、形变</strong>三旋钮拧出来的</td><td>只改造型、只会加帧</td><td>同样一个「坐下」：一拍二匀分 vs 混用（落座一拍三 + 起势一拍一）</td></tr><tr><td>④ 弧线</td><td>现实里没有脱离关节的运动；<strong>直线只属于机械</strong></td><td>为了省事画直线、画折线</td><td>挥手：直线往返 vs 肩→肘→腕各走各的弧</td></tr></tbody></table>
+<hr>
+<h2>五、防拷问 QA（预判学生会问的）</h2>
+<p><strong>Q1：为什么蓄力非得「反着来」？</strong> A：因为力需要一个「起跑线」。同向的准备只是在做动作的一半，观众看到的是"被拽走的"；反向的蓄力让观众<strong>预期</strong>到动作方向 —— 预期被满足 = 有力量感。戏曲里这叫<strong>欲左先右、欲上先下</strong>，是同一个东西的两种语言。</p>
+<p><strong>Q2：我已经加了很多帧，为什么还是轻？</strong> A：你加的是<strong>时间</strong>，没改<strong>间距</strong>和<strong>形变</strong>。加帧只把动作变长。轻 → 重的最小改动顺序：先改间距（两端密中段疏）→ 再在接触帧压扁 → 最后才考虑加帧。</p>
+<p><strong>Q3：弧线为什么不能画直线？</strong> A：直线只在两种情况成立：<strong>机械运动</strong>，或你要故意做<strong>断裂感/机械感</strong>（如木偶、机甲）。其余情况下，直线是"没有骨架"的证据 —— 因为人体末端永远绕关节转动。</p>
+<p><strong>Q4：袖子/头发「依次停」到底错开几帧？</strong> A：经验值 <strong>2–4 帧</strong>一档，整段余波 <strong>1–3 次</strong>递减。戏曲的水袖要更"长气"：滞后可到 <strong>4–12 帧</strong>，余波 2–3 次（见 <a href="../03-motion/06-cloth-hair-sleeve.html">03-motion/06</a>）。错开越多，布料越"重"且越"飘"。</p>
+<p><strong>Q5：AI 不是已经能自动补间了吗？这些不都能自动？</strong> A：AI 补的是<strong>物理正确</strong>，不补<strong>表演个性</strong>。这四格里「蓄多长算蓄够」「弧弯到什么程度」「袖子错开 2 帧还是 4 帧」是<strong>选择</strong>，不是物理必然 —— 凡是被当成物理量去算的，AI 都会；凡是要做取舍的，都还在人手里。<strong>四格里的取舍，就是原画这个岗位的不可替代部分。</strong></p>
+<hr>
+<h2>六、课堂练习（对比实验，各 20 分钟）</h2>
+<ol><li><strong>只动一个旋钮</strong>：同一段「拾物起身」，画三版 —— 只改帧数 / 只改间距 / 只改形变，并排播。让学生说出哪一版最"重"。（答案：间距那版最明显）</li><li><strong>蓄力 0 / 2 / 6 帧</strong>：同一次"扑出去"，三版对比，投票哪版有气势，再看 6 帧版是不是"慢了"——引出"预备要短"。</li><li><strong>同时停 vs 依次停</strong>：同一段停住动作两版，涂黑看剪影，谁像"有肉的人"。</li><li><strong>轨迹连点法</strong>：把自己上一版作业逐帧标出手部中心点，连成线 —— 凡是直线的地方就是该改的地方。</li></ol>
+<hr>
+<h2>七、出处与核验</h2>
+<table><thead><tr><th>内容</th><th>级别</th><th>出处</th></tr></thead><tbody><tr><td>预备、跟随重叠、弧线、缓入缓出</td><td>✅ 原理层</td><td>Thomas &amp; Johnston《The Illusion of Life》(1981)，中译本《生命的幻象》方丽译，中国青年出版社 2011，ISBN 9787500697459</td></tr><tr><td>タメ / ツメ / 抜き / 緩急</td><td>✅ 原理层</td><td>日语原画行业术语，见 <a href="03-timing-spacing.html">03-timing-spacing.md</a></td></tr><tr><td>欲左先右、欲上先下；亮相</td><td>✅</td><td>戏曲身段程式，见 <a href="02-motion-laws.html">02-motion-laws.md</a> 第四节</td></tr><tr><td>中国动画教学体系里的"动作规律"</td><td>✅</td><td>严定宪《动画技法》，见 <a href="../05-china/02-yan-dingxian.html">../05-china/02-yan-dingxian.md</a></td></tr><tr><td>具体片例的镜头与作者归属</td><td>⚠️</td><td>引用前先查 <a href="https://www.sakugabooru.com/">sakugabooru</a>，见 <a href="../references/sourcing-log.html">../references/sourcing-log.md</a></td></tr></tbody></table>
+<blockquote><p>本页的帧数区间（2–6 / 2–4 / 4–12 帧等）是<strong>教学经验值</strong>，随角色体型、打数与风格浮动，不是硬标准 —— 用它当起点，用回放验证。</p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 视频的确定性流程（流程卡 · 反"抽卡"） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>AI 视频的确定性流程（流程卡 · 反"抽卡"）</h1>
+<blockquote><p>✅ 实践层。<strong>用途</strong>：当你已经抽了一二十次还抽不到能用的镜头时，<strong>别再抽</strong> —— 照这张卡退回去，一次只改一个变量。</p><p><strong>原理一句话</strong>：抽卡是<strong>让模型替你做选择</strong>；流程卡是<strong>把选择权拿回来</strong>。抽卡不累积信息，流程才累积。</p></blockquote>
+<hr>
+<h2>〇、先认清分工（这一步不认清，后面全是白费）</h2>
+<table><thead><tr><th>交给 AI（它擅长"像"）</th><th>留给自己（它不擅长"选"）</th></tr></thead><tbody><tr><td>材质、光影、氛围、背景、粉笔/木屑/纸面质感</td><td><strong>连续动作</strong>（走、跑、落地、手脚）</td></tr><tr><td>单镜情绪特写的<strong>表面</strong>（皮肤、绒毛、泪光）</td><td><strong>表演</strong>（反应延迟几帧、眼比头早几帧、hold 多长）</td></tr><tr><td>同一风格的大批量备选画面</td><td><strong>多角色互动</strong>、口型、接触与受力</td></tr><tr><td>你给的骨架的"重绘"</td><td><strong>哪一帧定稿</strong>（选择永远由人做）</td></tr></tbody></table>
+<blockquote><p><strong>判断法</strong>：凡是被当成物理量去算的，AI 都会；凡是要取舍的，都还在人手里。</p></blockquote>
+<hr>
+<h2>一、七步流程卡（照着走，不许跳步）</h2>
+<pre><code>① 定"谁在动"     —— 主体动 / 镜头动 / 背景动，写死
+② 上四锚         —— 角色参考图 + 风格串 + 种子 + 镜头参数（复制粘贴，禁止改写）
+③ 声音先行       —— 先定音乐/唱腔/音效时间轴；按乐句或板眼划段边界
+④ 划段（≤2 秒）  —— 每段写"这一段的唯一目标"（一段只做一件事）
+⑤ 给骨架         —— 每段 3–5 张关键姿势草稿（或整段简笔/实拍）→ 运动来自你
+⑥ 生成（一次一变量）—— 首帧 + 尾帧 +（骨架）+ 参考图；每轮只改一项，记日志
+⑦ 缝合 + 验收    —— 尾帧接首帧 / 重叠 8–12 帧溶解；缩拇指看、静音看、只听声看</code></pre>
+<p><strong>②的四锚是命门。</strong> 任何一项被"顺手改写"，前后两段立刻漂移，而你会误以为"AI 不稳定" —— 其实是锚变了。</p>
+<table><thead><tr><th>锚</th><th>本片（《画中人》）的取值</th><th>漂移症状</th></tr></thead><tbody><tr><td>角色参考图</td><td>杜丽娘 / 脆桃 / 小男孩 / 柳郎 各一张定稿三视图</td><td>脸型、头身比逐段变化</td></tr><tr><td>风格串</td><td>固定一串 8–15 词（粉笔灰 + 暖白纸感 + 陶土色），<strong>全片不改</strong></td><td>从粉笔感变成 smooth 3D</td></tr><tr><td>种子 seed</td><td>每段记下并尽量沿用</td><td>光向、色调乱跳</td></tr><tr><td>镜头参数</td><td>焦距感、运动方向、速度</td><td>一段推一段移，像两部片</td></tr></tbody></table>
+<hr>
+<h2>二、抽卡日志模板（自己看的，也是你论文的实证材料）</h2>
+<p>每轮只填一行。<strong>填不出"下一轮只改哪一项"，就不要开下一轮。</strong></p>
+<table><thead><tr><th>#</th><th>日期</th><th>段号</th><th>目标（唯一）</th><th>工具</th><th>输入（首帧/尾帧/骨架/参考图）</th><th>参数（种子·时长·运动·风格串）</th><th>结果</th><th><strong>差在哪（只写 1 项）</strong></th><th><strong>下一轮只改哪一项</strong></th><th>可用帧区间</th></tr></thead><tbody><tr><td>1</td><td></td><td>S3</td><td>脆桃"在减少"</td><td></td><td>首：… 尾：… 骨架：有</td><td>seed 1234 / 2s / 缓推 / 串A</td><td>体积没变</td><td>代价不可见</td><td>改成"桃身出现第一处缺口"</td><td>12–26</td></tr><tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p><strong>研究用加一列</strong>：<code>与上一轮的相似度</code> —— 抽得越多越趋同，这就是"选择性密度"的实证。<strong>你的抽卡记录本身就是数据。</strong></p>
+<hr>
+<h2>三、《画中人》分工表（哪段交给 AI、哪段必须自己画）</h2>
+<table><thead><tr><th>段落</th><th>交给 AI</th><th>必须自己来</th></tr></thead><tbody><tr><td>C1 仙女自陈</td><td>背景、光线、纸面质感</td><td>眼神与 4–8 帧反应延迟、呼吸</td></tr><tr><td>C2 地面画柳郎</td><td>粉尘、地面材质</td><td><strong>笔尖接触帧</strong>、手腕的弧</td></tr><tr><td>C3 说"不是"</td><td><strong>不要给</strong></td><td>那 1 帧微表情泄露（幅度 40–60%）</td></tr><tr><td>C5 画在脆桃身上</td><td>桃身表面粉笔质感</td><td>载体转移的衔接</td></tr><tr><td>C6 "摸不到，只能看"（主题句）</td><td><strong>不要给</strong></td><td>手穿过画 / 触不到的空白</td></tr><tr><td>C7 雕刻段（一镜到底）</td><td>木屑、工具材质、环境光</td><td>接触与受力、<strong>脆桃在减少</strong>、第一次被触到</td></tr><tr><td>C9 群像</td><td>群像氛围与动势</td><td>粉笔小人的<strong>依次</strong>加入（错开 2–4 帧）</td></tr><tr><td>C8 柳郎第一次呼吸（题眼）</td><td><strong>不要给</strong></td><td>全片的立论点，交出去就变成均值</td></tr><tr><td>C10 化月</td><td>月光、云雾</td><td>消解过程与最后的余波</td></tr></tbody></table>
+<hr>
+<h2>四、四个最常见的坑</h2>
+<ol><li><strong>整段生成</strong>（一次出 30 秒）→ <strong>必崩</strong>。上限：单段 2 秒（48 帧／24fps）。</li><li><strong>一轮改多个变量</strong> → 抽 100 次也学不到东西。<strong>一次一变量</strong>是不可让步的纪律。</li><li><strong>用形容词当控制</strong> → "优雅地转身"是许愿不是指令。改用首帧/尾帧/骨架/参考图说话。</li><li><strong>没有日志</strong> → 你会在第 20 次重复第 3 次的错误，还以为是工具不行。</li></ol>
+<hr>
+<h2>五、什么时候该停手</h2>
+<p>同一段连续 5 轮都"差同一项" → <strong>不是工具问题，是这一段的任务定义错了</strong>。退回去改任务：</p>
+<ul><li>"多角色互动" → 改成"多角色<strong>依次</strong>入画"（拆成单人镜）；</li><li>"走过去" → 改成"<strong>人不动、背景动</strong>"（视差）；</li><li>"复杂表演" → 改成"<strong>一个微表情 + 一次呼吸</strong>"。</li></ul>
+<blockquote><p>推不动时，不是要更用力，是<strong>要换更小的切口</strong>。</p></blockquote>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

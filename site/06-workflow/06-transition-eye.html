@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>眼睛转场（推镜入瞳 · 虹膜匹配剪辑） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>眼睛转场（推镜入瞳 · 虹膜匹配剪辑）</h1>
+<blockquote><p>✅ 实践层。「推镜到眼睛 → 瞳内景象展开成下一场」是最古老的转场之一，专业叫 <strong>虹膜匹配剪辑（iris match cut）</strong>。</p><p>它比溶解高级的地方在于：<strong>遮罩是物理的</strong> —— 瞳孔本身就是画面里唯一"天然的圆"，观众感觉不到"剪辑"，只感觉到"看进去"。</p><p>配套：<a href="04-one-take.html">04-one-take</a>（四锚 / 三约束 / 缝法）· <a href="03-ai-video-pipeline.html">03-ai-video-pipeline</a>（分段与一次一变量）</p></blockquote>
+<hr>
+<h2>一、三段结构（配四锚用；一段一运动）</h2>
+<table><thead><tr><th>段</th><th>时长</th><th>内容</th><th>镜头（只做一种运动）</th><th>谁来做</th></tr></thead><tbody><tr><td><strong>A 推近</strong></td><td>2 s（48 帧）</td><td>人物在画面里<strong>不动</strong>，只有镜头缓推</td><td>只推</td><td>AI 可（背景/光/材质）</td></tr><tr><td><strong>B 入瞳</strong></td><td>1–2 s</td><td>瞳孔逐步占满画面 → <strong>瞳孔边缘溢出画框</strong></td><td>推到底后几乎静止</td><td><strong>自己画</strong></td></tr><tr><td><strong>C 瞳内展开</strong></td><td>2 s</td><td>上一帧的"瞳内景象"放大成新场景</td><td>展开/反向</td><td>混合</td></tr></tbody></table>
+<p><strong>三张必须自己画的关键帧</strong>：</p>
+<ol><li>眼睛入画（眼睛成为画面的主体）</li><li>瞳孔中心（<strong>观众此时还没意识到要转场</strong>）</li><li><strong>铰链帧</strong>：瞳孔边缘越过画框的那一帧 ← 整个转场的成败就在这一张</li></ol>
+<hr>
+<h2>二、匹配剪辑的三条对齐（不对齐就会出现"顿"）</h2>
+<table><thead><tr><th>对齐项</th><th>规则</th><th>不对齐的后果</th></tr></thead><tbody><tr><td><strong>运动方向</strong></td><td>推入的方向 = 新场景展开的方向（<strong>同向继续</strong>，别反向）</td><td>观众会感觉"被拉回去"</td></tr><tr><td><strong>亮度曲线</strong></td><td>暗接暗、亮接亮；要反差就插 <strong>1–2 帧闪黑/闪白</strong>，<strong>别硬接</strong></td><td>硬接＝跳一下，转场感暴露</td></tr><tr><td><strong>速度</strong></td><td>推入的<strong>末速 = 新场景的初速</strong>；末速为 0（停住）= 断掉</td><td>顿挫，像卡了一帧</td></tr></tbody></table>
+<hr>
+<h2>三、缝合参数（圆形遮罩）</h2>
+<ul><li>取 B 段最后一帧的瞳孔圆（中心 cx, cy，半径 r）为遮罩起点，<strong>逐帧放大到覆盖全画</strong>，3–5 帧完成；</li><li>边缘<strong>羽化 2–4 px</strong>（硬边像老式过场，不"物理"）；</li><li>瞳孔若偏离画面中心，<strong>遮罩中心要跟着眼位走</strong>（跟着头眼关系，不要固定死中心）。</li></ul>
+<hr>
+<h2>四、三个奇幻画面：要"递进"，不要"并列"</h2>
+<p><strong>排列原则</strong>：三画面 = 三级台阶，直接呼应本片主题（<strong>可看 → 不可触 → 可触</strong>）：</p>
+<table><thead><tr><th>台阶</th><th>介质</th><th>可触性</th><th>视觉关键</th></tr></thead><tbody><tr><td>①</td><td>纸 / 粉笔世界</td><td>只能看</td><td>线在<strong>生长</strong>、草图、未完成的留白</td></tr><tr><td>②</td><td>水 / 墨世界</td><td>有映象、摸不到</td><td>映象<strong>破碎</strong>、倒影与实体错位</td></tr><tr><td>③</td><td>陶土 / 木世界</td><td><strong>可触</strong></td><td>有<strong>实体</strong>、有<strong>缺口</strong>（预备"代价"）</td></tr></tbody></table>
+<p><strong>三条硬规矩</strong>：</p>
+<ol><li>每画面 <strong>一个动作 + 一个运动方向</strong>，≤2 秒；</li><li>三画面共用<strong>同一风格锚 + 同一光向</strong>（否则像三个不同短片的素材拼起来）；</li><li>"奇幻"来自 <strong>尺度错位</strong>（极大/极小）与 <strong>材质错位</strong>（水做成固体、纸做成布），<strong>不是元素堆叠</strong>（越多元素越均值）。</li><li>三画面之间用 <strong>同向运动匹配</strong>衔接（不要用溶解 —— 溶解会泄气）。</li></ol>
+<hr>
+<h2>四·补、"神明视角"怎么实现（巨物 / 超现实）</h2>
+<blockquote><p><strong>先定一条</strong>：神明视角是<strong>视点</strong>，不是内容。同样的牡丹，俯拍是"看花"，仰拍溢出画框才是"被花看着"。</p></blockquote>
+<h3>4.1 三条实现路径（可单用可叠用）</h3>
+<table><thead><tr><th>路径</th><th>怎么做</th><th>观众的感受</th></tr></thead><tbody><tr><td><strong>仰视巨物</strong></td><td>视点压到最低，主体占画面 2/3 以上并<strong>溢出画框</strong></td><td>我变小了</td></tr><tr><td><strong>俯视无碍</strong></td><td>视点抬高：没有前景、没有遮挡、<strong>地平线移出画面</strong></td><td>我变大了 / 我在外面</td></tr><tr><td><strong>无人视点</strong></td><td>画面里<strong>没有人、没有影子、没有视线指引</strong></td><td>我就是那个"看"</td></tr></tbody></table>
+<p><strong>神明视角三条禁令</strong>：</p>
+<ol><li>不出现"人眼高度"的水平线（那是人的视角）；</li><li>不出现视点动机（不给人物视线引导，镜头<strong>无动机</strong>地看）；</li><li>不出现尺度参照物 —— 或用<strong>材质细节</strong>暗示尺度（指纹的旋纹、纸纤维、笔触的粗细）。</li></ol>
+<h3>4.2 巨物化的三条做法（超现实不靠堆元素）</h3>
+<table><thead><tr><th>做法</th><th>说明</th><th>本片用法</th></tr></thead><tbody><tr><td><strong>尺度错位</strong></td><td>把熟悉的东西放到不属于它的尺度</td><td>一根粉笔线 ＝ 横贯的山脉</td></tr><tr><td><strong>材质错位</strong></td><td>换材质不换形状（水做成固体、纸做成布）</td><td>牡丹花瓣做成陶土</td></tr><tr><td><strong>语境错位</strong></td><td>把程式符号放进自然景观的位置</td><td>翎子 ＝ 林；水袖 ＝ 云</td></tr></tbody></table>
+<h3>4.3 戏曲元素的巨物化对照（<strong>这是本片作者性所在</strong>）</h3>
+<table><thead><tr><th>戏曲元素</th><th>巨物化</th><th>落在哪一台阶</th></tr></thead><tbody><tr><td><strong>鸟类</strong>（<strong>不要画真鸟</strong>）</td><td><strong>翎子（雉鸡翎）放大成森林／立柱</strong>；水袖翻飞 ＝ 群鸟起飞</td><td>① 纸（线还没闭合）</td></tr><tr><td><strong>蝴蝶</strong></td><td>蝶翼 ＝ 殿宇大门；翅上花纹 ＝ 地图</td><td>② 水（倒影里的蝶比实体大 → 摸不到）</td></tr><tr><td><strong>牡丹花枝</strong></td><td>花枝 ＝ 柱廊；花瓣 ＝ 台阶；花蕊 ＝ 光源</td><td>③ 陶土（有实体、有缺口 → 可触）</td></tr></tbody></table>
+<blockquote><p><strong>关键判断</strong>：戏曲的"鸟"本来就在<strong>行头</strong>里（翎子），"翅膀"本来就在<strong>水袖</strong>里 —— 不必画真鸟。</p><p>把行头放大成自然景观，比"做一只巨型神鸟"更作者、更省、"AI 味"更低。</p></blockquote>
+<p><strong>建议分配</strong>（三台阶各领一个元素）：① 翎子 → ② 蝴蝶 → ③ 牡丹。</p>
+<h3>4.4 提示词结构（给豆包／海螺／LibTV 用）</h3>
+<pre><code>[视角] + [巨物对象与材质] + [尺度暗示] + [单一运动] + [光向] + [禁止项]</code></pre>
+<p>例：<code>极低角度仰视，一根未闭合的白色粉笔线如山脉横贯画面，可见纸纤维，线条缓慢向前生长，侧逆光，无粒子、无星云、无发光边缘、无漂浮岛</code></p>
+<h3>4.5 禁用清单（这些一出现就变"AI 味"）</h3>
+<p>发光粒子 · 紫色星云 · 漂浮岛 · 对称神殿 · 光晕边缘 · 万花筒渐变 · 无意义镜头光斑 · 大量对称排布的小元素 · "史诗感"橙青对撞调色</p>
+<blockquote><p><strong>替换思路：把"光效"换成"材质"</strong> —— 想发光 → 改成半透明的花瓣；想要粒子 → 改成粉笔灰的碎屑。</p></blockquote>
+<h3>4.6 分工（很重要）</h3>
+<p><strong>这一段正该交给 AI</strong> —— 巨物／超现实<strong>不需要连续动作、不需要表演</strong>，恰好落在 AI 的强项区。 所以本片的总分配是：<strong>奇观给 AI，表演给自己。</strong></p>
+<hr>
+<h2>五、男主角登场：<strong>不要全身亮相</strong></h2>
+<table><thead><tr><th>做法</th><th>为什么</th></tr></thead><tbody><tr><td><strong>局部先到</strong>：先衣角 / 手指 / 半张脸在光里</td><td>呼应主题"<strong>摸得到才算生命</strong>" —— 第一次接触先给"可触"的部分</td></tr><tr><td><strong>影子先于实体</strong></td><td>先"看得见"，再"摸得到"，正好是主题的第二个台阶</td></tr><tr><td>从<strong>陶土/木的裂纹里"长"出来</strong></td><td>与"雕刻=生命"互文：他不是走来的，是<strong>被造出来的</strong></td></tr><tr><td>正面给他的第一帧：<strong>1 帧吸气起手</strong></td><td>接题眼（C8 的呼吸）；这一帧<strong>绝不给 AI</strong></td></tr></tbody></table>
+<hr>
+<h2>六、AI 执行段表（接 <a href="03-ai-video-pipeline.html">03</a> 的七步）</h2>
+<table><thead><tr><th>段</th><th>秒</th><th>目标（唯一）</th><th>缝合方式</th><th>谁来做</th></tr></thead><tbody><tr><td>S0 推近</td><td>2.0</td><td>人物不动，只推镜</td><td>尾帧接首帧</td><td>AI（背景/光）</td></tr><tr><td>S1 入瞳</td><td>1.5</td><td>瞳孔占满 → 边缘溢出</td><td><strong>铰链帧 + iris 遮罩</strong></td><td><strong>自己画</strong></td></tr><tr><td>S2 奇幻①纸</td><td>2.0</td><td>线在生长</td><td>同向运动匹配</td><td>AI（材质）</td></tr><tr><td>S3 奇幻②水</td><td>2.0</td><td>映象破碎</td><td>同向运动匹配</td><td>AI（材质）</td></tr><tr><td>S4 奇幻③陶土</td><td>2.0</td><td><strong>缺口出现</strong></td><td>同向运动匹配</td><td>AI（材质）+ 自己补缺口</td></tr><tr><td>S5 柳梦梅</td><td>2.0</td><td>局部先到 → 正脸</td><td>影 → 实</td><td>混合；呼吸帧自己画</td></tr></tbody></table>
+<p><strong>合计 ≈ 11.5 秒。</strong></p>
+<blockquote><p>⚠️ <strong>最大的坑</strong>：极近景眼球交给 AI = <strong>塑料球 / 死眼</strong>。S1 的瞳孔段<strong>不要交给 AI</strong> ——</p><p>它是"生命"的隐喻，也是最容易被均值化毁掉的一格。</p></blockquote>
+<hr>
+<h2>七、验收（转场专用）</h2>
+<ol><li><strong>静音看</strong>：转场"顺"不顺？（不顺 = 速度/方向没对齐）</li><li><strong>只看接缝</strong>：铰链帧在不在？瞳孔边缘是否真的越过了画框？</li><li><strong>主题检查</strong>：三个奇幻画面是否构成"<strong>可看 → 不可触 → 可触</strong>"的台阶？</li><li><strong>缩到拇指大小</strong>：转场后观众能不能立刻说出"现在在哪一层世界"？</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

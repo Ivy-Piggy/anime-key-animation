@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>口型与台词 / 唱腔节奏 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>口型与台词 / 唱腔节奏</h1>
+<blockquote><p>✅ 通用做法层。<strong>说话</strong>和<strong>唱</strong>是两套完全不同的口型逻辑——戏曲动画最容易在这里翻车。</p></blockquote>
+<hr>
+<h2>一、说话：口型表（够用版）</h2>
+<p>主流口型表 6–8 个形状。中文/日语用一个高度压缩的集合即可（日语所谓 <strong>口パク</strong>，常用「あ・い・う・え・お」五形；说唱段/台词多用 3 形省工版）。</p>
+<table><thead><tr><th>形</th><th>对应</th><th>画法要点</th></tr></thead><tbody><tr><td>A</td><td>啊、啊韵开口（a/ɑ）</td><td>下颌下落最多，舌位低</td></tr><tr><td>I</td><td>衣、西（i）</td><td>嘴角横向拉开，下颌几乎不动</td></tr><tr><td>U</td><td>乌、呼（u）</td><td>唇收圆向前，<strong>嘴唇要"嘟"出来</strong></td></tr><tr><td>E</td><td>诶（e）</td><td>下颌中开，嘴角微拉</td></tr><tr><td>O</td><td>哦、喔（o）</td><td>圆唇、下颌中开</td></tr><tr><td>M/B/P</td><td>闭唇</td><td>唯一需要"完全闭唇"的帧，<strong>必须画准</strong></td></tr><tr><td>齿唇（f/v）</td><td>上齿咬下唇</td><td>半帧即可</td></tr><tr><td>中性</td><td>停顿、倾听</td><td>微闭、放松</td></tr></tbody></table>
+<p><strong>四条硬规矩</strong>：</p>
+<ol><li><strong>口型不追每一个字</strong>，追<strong>重音与语气</strong>。中文 4–5 字/秒，24fps 下塞不下每一个音素。</li><li><strong>闭唇帧最重要</strong>（M/B/P）：它是观众判断"对不上口型"的最敏感点。</li><li><strong>口型帧要在表情之后做</strong>：先定表情形状，再把口型"叠"在表情上，否则嘴会把脸上的表情抹平。</li><li><strong>呼吸与喉动要单独一层</strong>：说话时下巴与喉结的运动比嘴早 1–2 帧。</li></ol>
+<hr>
+<h2>二、日语原画的省工经验（能省 40% 帧数）</h2>
+<table><thead><tr><th>手法</th><th>做法</th><th>适用</th></tr></thead><tbody><tr><td>3 形口型</td><td>只用 闭 / 半开 / 大 三形</td><td>中远景、快速对白</td></tr><tr><td>口型循环（口パク ループ）</td><td>做 4–6 帧的口型循环反复用</td><td>长台词、背对镜头</td></tr><tr><td>侧脸口型</td><td>侧脸只做下颌开合</td><td>走路说话、群戏</td></tr><tr><td>台词留白</td><td>关键台词第一个字前留 2–4 帧静默</td><td>增强台词分量</td></tr></tbody></table>
+<blockquote><p><strong>注意</strong>：这些是<strong>省工手段</strong>。近景大特写不要用——近景正是要"多画几张"的地方。</p></blockquote>
+<hr>
+<h2>三、唱：唱腔的口型完全不同（戏曲动画必读）</h2>
+<p>昆曲/京剧的唱，<strong>口型不是"说话的口型放慢版"</strong>，而有自己的规矩（「字正腔圆」）：</p>
+<table><thead><tr><th>特征</th><th>说话</th><th>唱（昆曲/京剧）</th></tr></thead><tbody><tr><td>基本单位</td><td>字</td><td><strong>字 + 腔</strong>（一个字可以拖很长）</td></tr><tr><td>时长</td><td>单字 2–6 帧</td><td>单字可拖 24–96 帧（拖腔）</td></tr><tr><td>口型幅度</td><td>随音素变化</td><td><strong>小幅度、保持"腔口"形状</strong>（口型自成一种稳定的形）</td></tr><tr><td>变化方式</td><td>一个个音素切换</td><td><strong>在一个持续形状上做微调</strong>（波形式起伏）</td></tr><tr><td>表情约束</td><td>表情可自由覆盖口型</td><td><strong>唱时口型优先</strong>，表情主要靠眼、眉、身段</td></tr></tbody></table>
+<p><strong>动画实现建议（重点）</strong>：</p>
+<ol><li>唱段用 <strong>"腔口形状 + 微调"</strong> 的方式，不要做逐字音素动画。</li><li>唱段的<strong>表演重心移到眼与身</strong>——因为口型被"腔"占住了（这正是戏曲演员用"眼"演戏的原因）。</li><li>唱段要有<strong>换气帧</strong>（明显的一口吸气 + 肩上抬 1–2 帧），这是"真唱"的信号。</li><li><strong>拖腔 = 天然的 hold</strong>：拖腔期间不要加多余动作，让呼吸与眼神动即可。</li></ol>
+<hr>
+<h2>四、口型 × 板眼：把节奏交给音乐</h2>
+<p>戏曲的时间骨架是<strong>板眼</strong>（曲牌的决定性节奏），不是物理时间。做法：</p>
+<pre><code>曲牌一拍（板）→ 摄影表上一个"格"
+  ├─ 字头：口型到位（1–2 帧，一拍一）
+  ├─ 腔腹：口型保持 + 微调（一拍二/三）
+  └─ 腔尾：收口 + 换气准备
+身段/眼神的高峰对齐到"板"上 → 动作天然合乐</code></pre>
+<p><strong>结论</strong>：戏曲动画的摄影表应该<strong>先画板眼，再填动作</strong>。这样动作与音乐是一体的，而不是"先做动画后配乐"。详见 <a href="../references/duliniang-project.html">../references/duliniang-project.md</a>。</p>
+<hr>
+<h2>五、课堂练习</h2>
+<ol><li><strong>闭唇抓错</strong>：给一段对白，只标注所有闭唇帧（M/B/P），检查动画有没有画准。</li><li><strong>3 形 vs 全形</strong>：同一句台词做两版，比较省工与失真。</li><li><strong>拖腔练</strong>：取昆曲一个 2 秒的拖腔，只用一个稳定的腔口形状 + 微调，加换气帧。</li><li><strong>板眼分格</strong>：把一段唱分到摄影表格子上，先分板眼，再填动作。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

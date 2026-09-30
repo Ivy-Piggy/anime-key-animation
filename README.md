@@ -5,6 +5,22 @@
 
 ---
 
+## 三个入口（国内也能打开）
+
+| 入口 | 网址 | 说明 |
+|------|------|------|
+| **国内直连（推荐）** | `https://cdn.jsdelivr.net/gh/Ivy-Piggy/anime-key-animation@main/site/index.html` | jsDelivr CDN，国内一般可直连；整站自带样式，不依赖 Jekyll |
+| GitHub Pages | https://ivy-piggy.github.io/anime-key-animation/ | 原站（`.md` 由 Jekyll 渲染成 `.html`） |
+| 仓库源码 | https://github.com/Ivy-Piggy/anime-key-animation | 需要梯子 |
+
+> `site/` 目录是 `scripts/build_static.py` 生成的**零依赖静态镜像**：页面自带 CSS、站内链接已转成 `.html`。
+> 因此它可以在任何静态托管 / CDN / 网盘上整站打开。**内容更新后跑一次即可：**
+> ```bash
+> python3 scripts/build_static.py
+> ```
+
+---
+
 ## 这个库解决什么
 
 | 症状 | 缺的东西 | 对应模块 |

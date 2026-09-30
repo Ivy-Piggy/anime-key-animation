@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>07 资源 · 模块导览 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>07 资源 · 模块导览</h1>
+<blockquote><p>三条主线：<strong>书（理论）· 数据库（素材）· 课程（练）。</strong></p></blockquote>
+<table><thead><tr><th>文件</th><th>内容</th></tr></thead><tbody><tr><td><a href="01-books.html">01-books.md</a></td><td>书单：原画技术 / 表演 / 戏曲表演理论 / 学术（论文用）</td></tr><tr><td><a href="02-databases.html">02-databases.md</a></td><td>数据库与检索式：找连续动作、找镜头归属</td></tr><tr><td><a href="03-courses.html">03-courses.md</a></td><td>课程与自学路径（含工具与练习计划）</td></tr></tbody></table>
+<hr>
+<h2>优先级（如果你只有 10 小时）</h2>
+<table><thead><tr><th>顺序</th><th>做什么</th><th>用时</th></tr></thead><tbody><tr><td>1</td><td>读《动画师生存手册》的"间距与节奏"部分（不读全书）</td><td>2 h</td></tr><tr><td>2</td><td>读本库 <a href="../01-principles/00-index.html">01-principles</a> 全部 + 抄一次摄影表</td><td>2 h</td></tr><tr><td>3</td><td>读本库 <a href="../02-acting/00-index.html">02-acting</a> 全部 + 做一次"六条时钟"拆解</td><td>2 h</td></tr><tr><td>4</td><td>sakugabooru 找 3 段写实派近景，逐格数帧</td><td>2 h</td></tr><tr><td>5</td><td>按 <a href="../06-workflow/02-self-check.html">06-workflow/02-self-check.md</a> 自查自己手上的镜头</td><td>2 h</td></tr></tbody></table>
+<hr>
+<h2>关于"引用可靠性"的提醒</h2>
+<ul><li>本库的<strong>原理层（✅）</strong>可以放心引用。</li><li><strong>作品-人-镜头（⚠️）</strong>的归属<strong>必须核验</strong>（sakugabooru / 原画@wiki / BD 特典）。</li><li><strong>中文文献的版本信息</strong>（出版社、年份、页码）请以<strong>知网 / 读秀 / 图书馆</strong>为准——本库只给方向，不给引用格式。</li></ul>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

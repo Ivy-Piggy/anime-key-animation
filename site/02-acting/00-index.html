@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>02 表演原画 · 模块导览 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>02 表演原画 · 模块导览</h1>
+<blockquote><p><strong>这个模块是为"戏曲人物近景表演"这个具体问题建的。</strong></p><p>结论先说：<strong>近景表演做不出来，通常不是画技问题，而是"把六条不同的时钟当成了一条"。</strong></p></blockquote>
+<table><thead><tr><th>文件</th><th>内容</th><th>解决什么</th></tr></thead><tbody><tr><td><a href="01-microexpression-facs.html">01-microexpression-facs.md</a></td><td>微表情：FACS 动作单元 → 原画帧</td><td>"表情不像、不真"</td></tr><tr><td><a href="02-closeup-acting.html">02-closeup-acting.md</a></td><td>近景表演清单（六条时钟 + 三秒结构）</td><td>"近景很木、没有戏"</td></tr><tr><td><a href="03-eye-and-hands.html">03-eye-and-hands.md</a></td><td>眼与手：四功五法与部件分工</td><td>"眼神没有表情、手不知道放哪"</td></tr><tr><td><a href="04-lipsync.html">04-lipsync.md</a></td><td>口型与台词/唱腔节奏</td><td>"说话/唱腔对不上、嘴在乱动"</td></tr><tr><td><a href="05-acting-styles.html">05-acting-styles.md</a></td><td>三大表演体系对照 + 实拍参考法</td><td>"不知道自己该学哪一派"</td></tr><tr><td><a href="06-opera-translation.html">06-opera-translation.md</a></td><td><strong>戏曲程式 × 迪士尼法则：冲突与转译（核心章）</strong></td><td>"套迪士尼就串味"</td></tr></tbody></table>
+<hr>
+<h2>一、先给一句话诊断</h2>
+<p>近景表演"怎么努力都达不到要求"，按发生频率排：</p>
+<table><thead><tr><th>排序</th><th>症状</th><th>真实原因</th><th>去哪个文件</th></tr></thead><tbody><tr><td>1</td><td>表情只动嘴</td><td>表情靠<strong>眼周</strong>（眼轮匝肌）与<strong>鼻唇沟</strong>，不靠嘴</td><td><a href="01-microexpression-facs.html">01</a></td></tr><tr><td>2</td><td>一听话就立刻反应</td><td>缺<strong>反应延迟</strong>（0.2–0.4 秒）</td><td><a href="02-closeup-acting.html">02</a></td></tr><tr><td>3</td><td>没有呼吸</td><td>静止帧里唯一证明"活着"的东西被省掉了</td><td><a href="02-closeup-acting.html">02</a></td></tr><tr><td>4</td><td>眼睛不会演戏</td><td>眼球是高频省工部件，动画里必须<strong>刻意加戏</strong></td><td><a href="03-eye-and-hands.html">03</a></td></tr><tr><td>5</td><td>所有部位同时起停</td><td>没有<strong>错拍</strong>（offset）：眼睛先、头后、手最后</td><td><a href="02-closeup-acting.html">02</a></td></tr><tr><td>6</td><td>表情"符号化"到假</td><td>用程式符号填满了本该由生物性微表情填满的间隙</td><td><a href="06-opera-translation.html">06</a></td></tr></tbody></table>
+<hr>
+<h2>二、三层结构（本模块的统一框架）</h2>
+<pre><code>层 3  表演设计层   这一段戏的意图 / 情绪曲线 / 板眼骨架     ← 导演讲的、原画要先想清
+层 2  部件调度层   眼 / 眉 / 呼吸 / 头 / 手 / 嘴 的错拍表   ← 原画的日常工作，最见功力
+层 1  肌肉与形状层 具体每一帧的肌肉状态与形变（FACS 层）     ← 微表情的"真"</code></pre>
+<p><strong>大部分"努力达不到要求"，是因为只在层 1 死磕（拼命画五官），而层 2 从来没有设计过。</strong></p>
+<hr>
+<h2>三、三十秒版行动清单（先照做，再读长文）</h2>
+<ol><li>写<strong>错拍表</strong>：一句话台词，标出 眼(0帧) → 眉(2帧) → 头(4帧) → 手(8帧) 的错拍。</li><li>加<strong>反应延迟</strong>：听到信息后，第 4–8 帧才开始动。</li><li>加<strong>呼吸</strong>：全程叠一层 24–36 帧的起伏，永不停止。</li><li>拆<strong>层</strong>：眼睛/眉/呼吸/头/手/嘴 分六层，各自时钟。</li><li>每个表情的"爆发帧"用<strong>一拍一</strong>，其余用<strong>一拍二</strong>。</li><li>结尾给 2–4 帧 hold（收势），不要一到表情峰值就切镜头。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

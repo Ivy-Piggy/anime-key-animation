@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动作拆解五步法（把一个动作变成可执行的"施工单"） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>动作拆解五步法（把一个动作变成可执行的"施工单"）</h1>
+<blockquote><p>✅ 方法层。解决最磨人的那一句话：<strong>"我知道这里要动，但不知道从哪一帧下手。"</strong></p><p>拆解的输出不是灵感，是一张<strong>施工单</strong> —— 填完就能开工，不用再想。</p><p>配套：<a href="../01-principles/07-clinic.html">07-clinic 门诊表</a>（改错用）· <a href="03-ai-video-pipeline.html">03 AI 流程</a>（哪一步交给 AI）</p></blockquote>
+<hr>
+<h2>〇、总原则</h2>
+<p><strong>先写"发生什么"，再排"怎么动"。</strong></p>
+<p>一句话意图句：<strong>主语 + 动词 + 对象 + 为什么是此刻</strong>。 写不出这句话，说明这个动作不该存在 —— 删掉它，比画它省一个月。</p>
+<hr>
+<h2>一、五步（每次拆解都按这个顺序）</h2>
+<table><thead><tr><th>步</th><th>做什么</th><th>产出</th><th>合格标准</th></tr></thead><tbody><tr><td>1</td><td><strong>写意图句</strong>（一句）</td><td>这一下"她要干什么"</td><td>别人读一句话能说出动作方向</td></tr><tr><td>2</td><td><strong>分三段 + 分配帧数</strong></td><td>起势 / 动势 / 收势的帧数</td><td>三段都写了；收势没被省掉</td></tr><tr><td>3</td><td><strong>数关键姿势</strong>（3–6 张）</td><td>每张一句话"这张负责什么信息"</td><td>张数 ≤ 6；每张能过剪影测试</td></tr><tr><td>4</td><td><strong>落摄影表</strong></td><td>帧号 / 打数 / hold / 斜线（形变）</td><td>标了"力的起点"与"谁最后停"</td></tr><tr><td>5</td><td><strong>自查三问</strong></td><td>打钩</td><td>剪影 / 重心 / 末端</td></tr></tbody></table>
+<p><strong>第 2 步的帧数经验分配</strong>（24fps）：</p>
+<table><thead><tr><th>段</th><th>占比</th><th>特征</th><th>备注</th></tr></thead><tbody><tr><td>起势（预备）</td><td>15–25%</td><td>反向、幅度 10–20%、时间要短</td><td>2–6 帧，过长会"慢"</td></tr><tr><td>动势（主动作）</td><td>40–50%</td><td>帧最少、间距最大 → 最快</td><td>力的起点从这里发出</td></tr><tr><td>收势（缓冲/余波）</td><td>30–40%</td><td>缓冲 + 依次停 + 余波</td><td><strong>收势占比越大越重、越柔</strong></td></tr></tbody></table>
+<blockquote><p>想让动作"重"：把比例往收势挪。想让它"脆、急"：把收势砍到最小 —— 但一刀不砍就变塑料。</p></blockquote>
+<hr>
+<h2>二、施工单模板（复制即用）</h2>
+<pre><code>### 动作：____________（段号 S_ ／镜头 __）
+- 意图句：
+- 时长：__ 帧（24fps） 打数：一拍__
+- 力的起点 → 末端：______ → ______（末端最后动、最后停）
+
+| 段 | 帧号 | 关键姿势 | 这一张负责的信息 | 打数 |
+|----|------|----------|------------------|------|
+| 起势 |       |          | 反向蓄力（幅度 __%） |      |
+| 动势 |       |          | 力的释放（间距最大） |      |
+| 收势 |       |          | 缓冲 / 依次停 / 余波 __ 次 |      |
+
+- hold：帧 __ – __（共 __ 帧）  斜线（形变）：__
+- 自查：□ 剪影读得出  □ 重心在支撑面内  □ 末端最后停
+- 交给 AI 的部分：______（只限材质/氛围）   自己画：______</code></pre>
+<hr>
+<h2>三、常见动作拆解速查（24fps 经验值，按需调）</h2>
+<table><thead><tr><th>动作</th><th>起势</th><th>动势</th><th>收势</th><th>关键姿势</th><th>最易错</th></tr></thead><tbody><tr><td>抬手 / 够物</td><td>2–4</td><td>4–6</td><td>4–8</td><td>4</td><td><strong>指尖先动</strong>（应髋→肩→肘→腕→指）</td></tr><tr><td>回头 / 转身</td><td>3–6</td><td>5–8</td><td>6–12</td><td>5</td><td>头先动；应该<strong>眼神先到、头后到</strong></td></tr><tr><td>递物 / 接物</td><td>3–5</td><td>4–6</td><td>4–6</td><td>5</td><td>接触帧不共享 + 无回弹 → 像贴纸</td></tr><tr><td>坐下 / 起身</td><td>4–8</td><td>6–10</td><td>6–10</td><td>5</td><td>重心不转移（人像被抬起来的）</td></tr><tr><td><strong>被触碰（触觉反应）</strong></td><td>1–2</td><td>3–5</td><td>8–16</td><td>4</td><td>反应无延迟；全身一起动（应局部先抖）</td></tr><tr><td>落泪 / 情绪起</td><td>6–12</td><td>4–8</td><td>12–24</td><td>4</td><td>只动嘴、无眼周（AU6/AU12）</td></tr><tr><td>持续用力（雕刻/推）</td><td>—</td><td>循环 8–12/次</td><td>收势 6–10</td><td>6</td><td>只有手在动、躯干不动 → 假</td></tr><tr><td>转身离去（结尾）</td><td>3–6</td><td>8–14</td><td>12–20</td><td>4</td><td><strong>完全归位</strong> → 没有"未完成感"</td></tr></tbody></table>
+<hr>
+<h2>四、把施工单接进一天（这一步才是"流程化"）</h2>
+<pre><code>08:30  定段    读施工单，今天只推一段（一段＝一个"唯一目标"）
+09:00  出姿势  只画关键姿势（3–6 张），禁止画中间画
+14:00  落表    补间 + 摄影表（打数、hold、斜线）
+16:30  回放    三层自查：缩到拇指大小 / 静音 / 只听声音</code></pre>
+<p><strong>一天只推一段。</strong> 宁可 8 段 × 1 天，不要 1 段 × 8 天 —— 后者是"越改越乱"的唯一来源。</p>
+<table><thead><tr><th>时段</th><th>做什么</th><th>不许做什么</th></tr></thead><tbody><tr><td>08:30–09:00</td><td>读施工单、定今天这一段</td><td>不许重画昨天那一段</td></tr><tr><td>09:00–12:00</td><td>关键姿势（3–6 张）</td><td>不许抠线条、不许上色</td></tr><tr><td>14:00–16:00</td><td>补间 + 摄影表</td><td>不许临时改意图句</td></tr><tr><td>16:30–17:00</td><td>回放三层自查 + 记一行日志</td><td>不许"顺手再改一点"</td></tr></tbody></table>
+<hr>
+<h2>五、与 AI 流程的分界</h2>
+<table><thead><tr><th>施工单里的这一格</th><th>谁来做</th></tr></thead><tbody><tr><td><strong>关键姿势、收势、触觉、呼吸</strong></td><td><strong>自己画</strong>（这些就是"选择"）</td></tr><tr><td>材质、氛围、背景、尘屑、光</td><td>可以交给 AI（见 <a href="03-ai-video-pipeline.html">03</a>）</td></tr><tr><td>连续动作的中间画</td><td>自己补（AI 的连续动作仍不稳，别赌）</td></tr></tbody></table>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

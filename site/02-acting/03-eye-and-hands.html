@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>眼与手：四功五法与部件分工 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>眼与手：四功五法与部件分工</h1>
+<blockquote><p>✅ 戏曲侧为行业共识（「四功五法」是京剧/昆曲表演的基本框架）+ 动画侧为应用建议。</p></blockquote>
+<hr>
+<h2>一、先接上戏曲的现成框架：四功五法</h2>
+<p>戏曲表演的「四功」与「五法」<strong>天然就是一套"表演部件分工表"</strong>，可以直接用来给动画表演分层——这比从零建立框架省事得多。</p>
+<table><thead><tr><th>四功</th><th>内容</th><th>动画对应</th></tr></thead><tbody><tr><td>唱</td><td>唱腔</td><td>唱段口型与节奏（不是"说话"口型，见 <a href="04-lipsync.html">04-lipsync.md</a>）</td></tr><tr><td>念</td><td>念白</td><td>台词口型与停顿</td></tr><tr><td>做</td><td>身段表演</td><td><strong>近景与中景的主体</strong>：眼、手、身</td></tr><tr><td>打</td><td>武打/开打</td><td>动作戏原画</td></tr></tbody></table>
+<table><thead><tr><th>五法</th><th>内容</th><th>动画部件</th></tr></thead><tbody><tr><td><strong>手</strong></td><td>手势、指法</td><td>手/腕/袖的独立层</td></tr><tr><td><strong>眼</strong></td><td>眼神、眼法</td><td>眼球+眼皮+眉的独立层（<strong>最贵的省工项</strong>）</td></tr><tr><td><strong>身</strong></td><td>身段、腰腿</td><td>张力线、体块倾斜</td></tr><tr><td><strong>法</strong></td><td>方法、程式规范</td><td>造型/风格统一（作监的活）</td></tr><tr><td><strong>步</strong></td><td>台步、步法</td><td>走位与脚步原画、镜头调度</td></tr></tbody></table>
+<blockquote><p><strong>讲法建议</strong>：先讲五法，学生立刻理解"手眼身法步 = 五个独立时钟"，再回到 <a href="02-closeup-acting.html">02-closeup-acting.md</a> 的六条时钟，就通了。</p></blockquote>
+<hr>
+<h2>二、眼：戏曲的"眼法"清单</h2>
+<p>戏曲有一套成体系的眼法，直接可转成动画帧设计：</p>
+<table><thead><tr><th>眼法</th><th>做法</th><th>情绪</th><th>动画实现</th></tr></thead><tbody><tr><td>看</td><td>定睛直视</td><td>专注</td><td>眼球停住 + 眼皮不动（1 帧到位）</td></tr><tr><td>睇</td><td>斜视</td><td>含情、打量</td><td>眼球斜移 2 帧 + 头不动</td></tr><tr><td>瞟</td><td>快速一扫</td><td>心虚、俏皮</td><td>2 帧内移开，<strong>一拍一</strong></td></tr><tr><td>瞄</td><td>偷看</td><td>羞、试探</td><td>眼皮半垂 + 眼球移 1–2 帧</td></tr><tr><td>瞪</td><td>睁圆</td><td>惊、怒</td><td>AU5，2 帧到位，配 hold</td></tr><tr><td>眯</td><td>收细</td><td>疑、笑、挑衅</td><td>AU7，3–4 帧</td></tr><tr><td>含</td><td>眼皮微垂、不聚焦</td><td>怅惘、思念</td><td>长期半幅度 hold（杜丽娘主用）</td></tr><tr><td>眼随手动</td><td>手指到哪，眼跟到哪</td><td>程式规范</td><td><strong>手先 2 帧，眼后到</strong>（错拍！）</td></tr></tbody></table>
+<p><strong>四条动画侧的硬提醒</strong>：</p>
+<ol><li><strong>动画里的眼睛是"省工区"</strong>：因为它小、翻拍看不清，所以极易被简化 → 结果就是"没有戏"。<strong>近景必须反过来，把眼当成最贵的部件去做。</strong></li><li><strong>眼要"先到"</strong>：真人先看、后转头。动画里眼睛比头早 1–3 帧，观众就会觉得"这是活的"。</li><li><strong>眨眼是节拍器</strong>：不是装饰。眨眼间隔 = 情绪强度的第二指标（紧张→频繁；心动→变慢）。</li><li><strong>瞳孔与泪膜</strong>：大特写时，瞳孔的收缩、下眼睑的湿光（泪膜）是"含泪"的全部秘密，不要靠画水珠。</li></ol>
+<hr>
+<h2>三、手：戏曲指法与"手不空"</h2>
+<table><thead><tr><th>要点</th><th>说明</th></tr></thead><tbody><tr><td><strong>兰花指 / 单指 / 剑指</strong></td><td>造型符号；动画化时保留<strong>手指的分组关系</strong>（不要五根平行）</td></tr><tr><td><strong>手不空（手绝不空闲）</strong></td><td>戏曲演员的手永远在动作中（理鬓、抚袖、执扇）。<strong>近景里手没有"空白状态"</strong></td></tr><tr><td><strong>手是第二张脸</strong></td><td>台词停顿时，手的微动代替说话（攥、抚、抖、按）</td></tr><tr><td><strong>手必须晚半拍</strong></td><td>比意识慢 4–8 帧：先有念头 → 眼球动 → 头动 → <strong>手才动</strong></td></tr><tr><td><strong>手的"收"比"出"重要</strong></td><td>出手快、收手慢（且带一点回弹）</td></tr></tbody></table>
+<p><strong>常见错误</strong>：手在做"姿势"，而不是在做"事"。<strong>手势要有目标物</strong>（衣袖、鬓发、栏杆、扇子），否则是摆拍。</p>
+<hr>
+<h2>四、眼手配合的三种经典组合（可直接用于杜丽娘）</h2>
+<table><thead><tr><th>组合</th><th>帧表（一拍二，括号为帧）</th><th>情绪</th></tr></thead><tbody><tr><td><strong>看物—伸手—收回</strong></td><td>眼(0) → 手出(6) → 触(12) → 手停 4 帧 → 收回(24–36，慢)</td><td>触碰回忆、试探</td></tr><tr><td><strong>遮—露</strong></td><td>手/袖遮(0–8) → 停 6 帧 → 露出眼(20–26，眼先出)</td><td>羞、偷看</td></tr><tr><td><strong>空望—垂手</strong></td><td>眼望远(0–20) → 呼吸一次 → 手垂(30，慢慢落) → 头微低(40)</td><td>怅惘（杜丽娘结尾常用）</td></tr></tbody></table>
+<hr>
+<h2>五、课堂练习</h2>
+<ol><li><strong>眼法八张</strong>：用同一张脸，画八种眼法（看睇瞟瞄瞪眯含眼随手），只改眼与眉。</li><li><strong>手不空</strong>：一段 3 秒近景，禁止手处于静止打直状态，必须始终有"事"可做。</li><li><strong>错拍纸</strong>：写下眼/头/手的帧号，要求三者必须不同帧起、不同帧停。</li><li><strong>大特写</strong>：只画眼睛（含泪），不许出现眼泪珠，让同学猜情绪。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

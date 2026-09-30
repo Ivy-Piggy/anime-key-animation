@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>数据库与检索式 · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>数据库与检索式</h1>
+<blockquote><p>找<strong>连续动作素材</strong>、找<strong>镜头归属</strong>、找<strong>学术支撑</strong>——三条检索线。</p></blockquote>
+<hr>
+<h2>一、找连续动作（素材线）</h2>
+<table><thead><tr><th>站点</th><th>用途</th><th>检索方式</th><th>备注</th></tr></thead><tbody><tr><td><strong>sakugabooru</strong></td><td>按原画师/动作标签检索镜头片段（<strong>最重要</strong>）</td><td>标签组合，如 <code>toshiyuki_inoue</code>、<code>effects</code>、<code>hair</code>、<code>impact_frames</code></td><td>⚠️ 标签体系以其站点自动补全为准</td></tr><tr><td><strong>Sakuga Blog</strong>（sakugabooru 的博客）</td><td>深度分析文章（原画师专题）</td><td>站内搜索人名/作品</td><td>English</td></tr><tr><td><strong>AniPages Daily</strong></td><td>日本动画作画评论的历史资料库（博文量大）</td><td>Google <code>site:</code> 检索</td><td>English；老文章多</td></tr><tr><td><strong>Animation Obsessive</strong></td><td>高质量动画分析通讯</td><td>站内栏目检索</td><td>English</td></tr><tr><td><strong>原画@wiki</strong></td><td>逐集记录原画担当</td><td>按作品名检索</td><td>⚠️ 常有不全/有误</td></tr><tr><td><strong>BD 映像特典 / 原画集</strong></td><td><strong>最可靠</strong>的原画表记来源</td><td>购买/图书馆</td><td>值得为关键作品投入</td></tr><tr><td><strong>B站 / YouTube</strong></td><td>作画 MAD、原画集翻页、逐格讲解</td><td>关键词见下</td><td>便于课堂演示（注意版权使用范围）</td></tr><tr><td><strong>Internet Archive</strong></td><td>早期动画/老片</td><td>片名检索</td><td>公共领域材料</td></tr></tbody></table>
+<h3>关键词模板（直接可用）</h3>
+<pre><code>YouTube：  原画 作画MAD / アニメ 作画 / "sakuga" MAD 2020 / &lt;animator name&gt; 作画
+B站：      作画MAD / 原画集 / &lt;作品名&gt; 作画 / 逐格 / 原画讲解
+sakugabooru：&lt;artist tag&gt; + &lt;action tag&gt;   （例：toshiyuki_inoue hair）
+影片搜索： &lt;作品名&gt; + 該当シーン / &lt;作品名&gt; + 原画</code></pre>
+<hr>
+<h2>二、找镜头归属（核验线）</h2>
+<table><thead><tr><th>步</th><th>做什么</th></tr></thead><tbody><tr><td>1</td><td>sakugabooru 找片段，记下标注的原画师与"confidence"</td></tr><tr><td>2</td><td>原画@wiki / BD 特典 交叉核对</td></tr><tr><td>3</td><td>两者一致 → 可写；不一致或空缺 → <strong>写"归属存疑"</strong></td></tr><tr><td>4</td><td>记录到 <a href="../references/sourcing-log.html">../references/sourcing-log.md</a></td></tr></tbody></table>
+<blockquote><p><strong>原则</strong>：宁可写"《某作品》某段落"，不写"某人的某镜头"。这是这个领域最容易翻车的地方。</p></blockquote>
+<hr>
+<h2>三、找学术支撑（论文线）</h2>
+<table><thead><tr><th>库</th><th>用途</th><th>技巧</th></tr></thead><tbody><tr><td><strong>CNKI</strong></td><td>中文期刊/学位论文（戏曲动画、动画教学、表演）</td><td>用"主题"检索；导出题录；核对年卷期页</td></tr><tr><td><strong>读秀 / 超星</strong></td><td>中文图书的<strong>页码与版次</strong>核对</td><td>图书"原文传递"可查具体页</td></tr><tr><td><strong>豆瓣</strong></td><td>中文版书名/出版社/页数（快速核对）</td><td>⚠️ 以其书页信息为准，仍需与纸本比对</td></tr><tr><td><strong>CNKI/万方</strong></td><td>戏曲表演理论的当代研究</td><td>关键词：程式、身段、四功五法</td></tr><tr><td><strong>JSTOR / Project MUSE / 图书馆外文库</strong></td><td>动画理论（LaMarre、日本动画研究）</td><td>英文检索</td></tr><tr><td><strong>动画学相关英文期刊</strong></td><td><em>Animation: An Interdisciplinary Journal</em> 等 ⚠️ 以你校可用库为准</td><td>找"key animation""sakuga""acting"</td></tr></tbody></table>
+<hr>
+<h2>四、常用检索式（可复制）</h2>
+<pre><code>sakugabooru：  hair + walk_cycle
+sakugabooru：  impact_frames + effects
+B站：          "原画" "间距" 讲解
+B站：          "水袖" 动画
+YouTube：      "Animator's Survival Kit" spacing
+CNKI：         主题 = (动画 OR 原画) AND 动作规律
+CNKI：         主题 = 戏曲 AND (动画 OR 漫画)
+Google：       site:sakugabooru.com &lt;animator name&gt;
+Google：       "原画" &lt;作品名&gt; 原画担当 一覧</code></pre>
+<hr>
+<h2>五、工具（本机与通用）</h2>
+<table><thead><tr><th>用途</th><th>工具</th></tr></thead><tbody><tr><td>逐格导出</td><td><code>ffmpeg -i in.mp4 -vf fps=24 frames/%04d.png</code>（本机可用 cv2 替代）</td></tr><tr><td>逐格查看/标注</td><td>QuickTime 逐帧（方向键）、剪辑软件、<code>mpv</code> 逐帧</td></tr><tr><td>参考对比播放</td><td>双窗口并排 / 逐格同步（做"我的版本 vs 参考"）</td></tr><tr><td>摄影表</td><td>手写（推荐）/ 表格软件 / 2D 软件内置</td></tr><tr><td>2D 制作</td><td>按需选择（本库不推荐具体软件，见 <a href="03-courses.html">03-courses.md</a>）</td></tr></tbody></table>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

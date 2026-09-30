@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>戏曲程式 × 迪士尼法则：冲突与转译（核心章） · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="../index.html">← 首页</a><a href="../README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>戏曲程式 × 迪士尼法则：冲突与转译（核心章）</h1>
+<blockquote><p>本库篇幅最长的一篇，因为它是"杜丽娘近景表演"这个问题的<strong>正解所在</strong>。</p><p>✅ 戏曲侧为表演学共识；动画侧为可执行转译建议（⚠️ 属创作方法，需按你的片子试配参数）。</p></blockquote>
+<hr>
+<h2>一、冲突清单：为什么"套迪士尼"就串味</h2>
+<table><thead><tr><th>#</th><th>冲突点</th><th>迪士尼要的</th><th>戏曲要的</th><th>直接套用的后果</th></tr></thead><tbody><tr><td>1</td><td><strong>夸张 vs 节制</strong></td><td>超过真人的幅度，让观众读得懂</td><td>收敛、含蓄，"留白"给观众体会</td><td>变成美式卡通扮戏曲，"油"</td></tr><tr><td>2</td><td><strong>物理时间 vs 板眼</strong></td><td>时间由物理（重量/力）决定</td><td>时间由音乐（曲牌/板眼）决定</td><td>动作与唱腔脱节，像配乐不是合乐</td></tr><tr><td>3</td><td><strong>个性表演 vs 程式符号</strong></td><td>每个人物必须有"不同的小动作"</td><td>每个行当有<strong>规定的</strong>动作（程式）</td><td>程式被"改没"了，本行观众不认</td></tr><tr><td>4</td><td><strong>全身参与 vs 包裹形体</strong></td><td>身体可任意挤压拉伸</td><td>身体被宽袍大袖包裹，形不能破</td><td>形体"破相"（尤其脸与手）</td></tr><tr><td>5</td><td><strong>反应延迟 vs 亮相</strong></td><td>自然延迟</td><td>关键处<strong>主动静止造型</strong></td><td>该停的时候动了，气势散了</td></tr><tr><td>6</td><td><strong>视线自由 vs 眼随手动</strong></td><td>眼可以随意看向镜头方向</td><td>眼要跟手、要有"点"</td><td>眼神散，无"戏点"</td></tr></tbody></table>
+<hr>
+<h2>二、三条转译路线（先选路线，再谈技术）</h2>
+<table><thead><tr><th>路线</th><th>做法</th><th>中国动画的成功先例</th><th>风险</th></tr></thead><tbody><tr><td><strong>还原派</strong>（程式优先）</td><td>尽量保留程式动作与节奏，动画只做"连帧化"</td><td>《大闹天宫》《骄傲的将军》</td><td>定格感、像"活动的剧照"</td></tr><tr><td><strong>融合派</strong>（双轨表演）✅推荐</td><td>大拍用程式符号，小拍用生物性微表情填充</td><td>《三个和尚》的减法、美影厂中后期</td><td>需要清晰的"分层规则"（本节给）</td></tr><tr><td><strong>解构派</strong>（动画优先）</td><td>只取戏曲的造型与气韵，动作语言完全动画化</td><td>《山水情》的水墨写意、当代《中国奇谭》部分段</td><td>可能被指"不像戏曲"</td></tr></tbody></table>
+<hr>
+<h2>三、核心方法：双轨表演（Dual-Track Acting）</h2>
+<p><strong>这是本库最实用的一条建议。</strong></p>
+<h3>原理</h3>
+<p>戏曲的表演是<strong>"点状"的</strong>：一个程式动作（掩面、回眸、卧鱼）是<strong>一个高峰点</strong>，点与点之间是过渡。 迪士尼/动画的表演是<strong>"线状"的</strong>：一条连续的情绪曲线。</p>
+<p><strong>双轨 = 把"点"当骨架，"线"当血肉：</strong></p>
+<pre><code>摄影表（24fps，示例：48 帧的"惊—羞—怅"）
+
+帧0        12        24        36        48
+ │          │         │         │         │
+ ├─── 板 ───┼── 板 ───┼── 板 ───┼── 板 ───┤   ← 板眼（音乐骨架）
+ │          │         │         │         │
+[程式大拍]  惊(程式)   羞(掩面)   回眸(程式)  收势
+[生物小拍]  呼吸·眼颤  颊红·喉动  呼吸·泪膜  眼含</code></pre>
+<table><thead><tr><th>轨道</th><th>内容</th><th>频率</th><th>幅度</th><th>谁定</th></tr></thead><tbody><tr><td><strong>程式大拍</strong></td><td>身段、水袖、回眸、亮相</td><td>每 12–24 帧一个</td><td>大（全身）</td><td>戏曲语法 + 导演</td></tr><tr><td><strong>生物小拍</strong></td><td>呼吸、眨眼、喉动、颊红、眼周、瞳孔</td><td>连续不断</td><td>极小</td><td><strong>原画师（你的价值所在）</strong></td></tr></tbody></table>
+<blockquote><p><strong>一句话</strong>：<strong>平台上让程式说话，缝隙里让身体说话。</strong></p></blockquote>
+<h3>为什么这一招能解决"怎么努力都达不到要求"</h3>
+<p>因为此前的努力很可能全部投在"大拍"上（把程式动作画得更标准、更漂亮），而近景的<strong>"真"来自小拍</strong>——小拍此前是<strong>空缺的</strong>。所以拼命加努力也没用：你加重的是那一半本来就够了的东西。</p>
+<hr>
+<h2>四、板眼 = 天然的摄影表</h2>
+<p>昆曲的曲牌有严格的板眼结构。<strong>把板眼当时间骨架，动作天然合乐</strong>：</p>
+<table><thead><tr><th>术语</th><th>含义</th><th>动画对应</th></tr></thead><tbody><tr><td>板</td><td>强拍（每小节的第一拍，落"板"）</td><td>摄影表上的<strong>关键帧</strong>（动作高峰/亮相）</td></tr><tr><td>眼</td><td>弱拍（板与板之间）</td><td><strong>次要动作/微表情</strong>的位置</td></tr><tr><td>赠板</td><td>加花、慢唱</td><td>拖腔时的 hold，动作不要加</td></tr><tr><td>散板</td><td>自由节拍</td><td>呼吸、眼神游移的自由段（近景最佳空档）</td></tr></tbody></table>
+<p><strong>操作</strong>：</p>
+<ol><li>拿曲谱/录音，先数板眼，标出每一"板"的时间码。</li><li>换算成帧号（24fps），写进摄影表当关键帧。</li><li>动作高峰（亮相、转身、抛袖）<strong>必须落在"板"上</strong>。</li><li>"眼"（弱拍）与"散板"段留给微表情——<strong>这正是"缝隙"</strong>。</li></ol>
+<hr>
+<h2>五、参数建议表（起稿用，务必要按片子调）</h2>
+<table><thead><tr><th>参数</th><th>迪士尼常规</th><th><strong>戏曲动画建议值</strong></th><th>理由</th></tr></thead><tbody><tr><td>大表情幅度</td><td>100%</td><td><strong>40–60%</strong></td><td>节制</td></tr><tr><td>微表情幅度</td><td>—</td><td><strong>10–20%，持续 3–8 帧</strong></td><td>近景的"真"</td></tr><tr><td>表情建立帧数</td><td>8–12</td><td><strong>16–24</strong></td><td>含蓄、慢</td></tr><tr><td>表情收回帧数</td><td>20–30</td><td><strong>24–40</strong></td><td>余韵</td></tr><tr><td>亮相/程式动作 hold</td><td>2–4 帧</td><td><strong>6–12 帧</strong></td><td>让观众看见符号</td></tr><tr><td>常规 hold</td><td>少用</td><td><strong>多用（占比 30–40%）</strong></td><td>戏曲的"静"就是表演</td></tr><tr><td>口型幅度</td><td>中大</td><td><strong>小、保持腔口形</strong></td><td>唱腔见 <a href="04-lipsync.html">04-lipsync.md</a></td></tr><tr><td>身体变形位置</td><td>全身</td><td><strong>只在衣纹/水袖/飘带</strong></td><td>形体不能破</td></tr><tr><td>镜头长度</td><td>按剪辑</td><td><strong>近景给 1.5–2 倍时间</strong></td><td>表演需要时间落定</td></tr></tbody></table>
+<hr>
+<h2>六、杜丽娘（《牡丹亭·游园惊梦》）四镜推演</h2>
+<p>详见 <a href="../references/duliniang-project.html">../references/duliniang-project.md</a>。这里给一个"双轨"实例：</p>
+<table><thead><tr><th>镜头</th><th>程式大拍（落在板上）</th><th>生物小拍（缝隙里的活）</th></tr></thead><tbody><tr><td>① 推窗见春（中近景）</td><td>推窗→侧身→亮相，12 帧</td><td>呼吸；手指触到窗框时的"轻顿"；睫毛一颤</td></tr><tr><td>② 见花惊春（近景）</td><td>抬头、眼一亮（程式"惊"），落在板上</td><td>眼先到 2 帧 → 头后到；1 帧吸气；瞳孔微放</td></tr><tr><td>③ 羞而低头（近景）</td><td>掩面（水袖起，8 帧）；低头 60%</td><td>单侧嘴角；喉动 1 帧；颊红（色指定层）</td></tr><tr><td>④ 惆怅空望（近景·长）</td><td>回眸→垂手→微低头，24 帧</td><td><strong>12 帧 hold 里的呼吸 + 一次眨眼变慢 + 1 帧微表情泄露</strong></td></tr></tbody></table>
+<blockquote><p>第④镜的"1 帧微表情泄露"就是全片的戏眼：<strong>程式给结构，微表情给灵魂。</strong></p></blockquote>
+<hr>
+<h2>七、课堂练习</h2>
+<ol><li><strong>双轨分表</strong>：把一段昆曲唱段写成两张表（大拍表 + 小拍表），分别画，再叠加。</li><li><strong>幅度减半</strong>：把一段迪士尼式表演的整体幅度砍到 50%，看是否更"中国"。</li><li><strong>板眼对齐</strong>：给自己的一段动画配上昆曲录音，把动作高峰硬对齐到"板"上，感受差异。</li><li><strong>缝隙填空</strong>：在一段程式动作的 hold 里，只允许加呼吸、眨眼、1 帧微表情。</li></ol>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>

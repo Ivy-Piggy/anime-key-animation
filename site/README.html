@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>动漫原画设计 · Key Animation Design · 动漫原画设计</title>
+<style>
+:root{--paper:#FFFDF7;--ink:#221B2E;--ink2:#5C5266;--clay:#E4572E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:'Hiragino Sans GB','Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;
+ line-height:1.8;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:9;background:var(--paper);border-bottom:3px solid var(--ink);
+ padding:10px 18px;display:flex;gap:12px;flex-wrap:wrap;font-weight:800;font-size:15px}
+.bar a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;
+ padding:3px 12px;background:#FFF6E4}
+.bar a:hover{background:#FFEFD6}
+.bar .sp{flex:1}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 90px}
+h1{font-size:33px;line-height:1.35;margin:.2em 0 .6em;padding-bottom:.25em;border-bottom:4px solid var(--ink)}
+h2{font-size:25px;margin:1.6em 0 .5em;padding-left:.5em;border-left:8px solid var(--clay)}
+h3{font-size:20px;margin:1.3em 0 .4em}
+h4{font-size:17px;margin:1.1em 0 .3em;color:var(--ink2)}
+p{margin:.6em 0}
+a{color:var(--clay)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:15px;background:#fff}
+th,td{border:2px solid var(--ink);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#FFF6E4;font-weight:800}
+tr:nth-child(even) td{background:#FFFAF0}
+code{background:#F4EFE6;border:1px solid #DED6C8;border-radius:5px;padding:1px 5px;font-size:.92em}
+pre{background:#FFF6E4;border:3px solid var(--ink);border-radius:14px;padding:14px 16px;overflow:auto}
+pre code{background:none;border:none;padding:0}
+blockquote{margin:1em 0;padding:.5em 1em;border-left:8px solid var(--clay);background:#FFF6E4;border-radius:0 12px 12px 0}
+blockquote p{margin:.3em 0}
+ul,ol{padding-left:1.5em;margin:.6em 0}
+li{margin:.25em 0}
+hr{border:none;border-top:3px dashed #D6D0C6;margin:2em 0}
+img{max-width:100%;border:3px solid var(--ink);border-radius:12px;background:#fff}
+.foot{margin-top:3em;padding-top:1em;border-top:3px solid var(--ink);font-size:14px;color:var(--ink2)}
+</style></head><body>
+<div class="bar"><a href="index.html">← 首页</a><a href="README.html">README</a>
+<span class="sp"></span><span>动漫原画设计 · 静态镜像</span></div>
+<div class="wrap">
+<h1>动漫原画设计 · Key Animation Design</h1>
+<blockquote><p>一个给动画创作者用的<strong>原画设计资料库</strong>：动作规律、动作节奏、连续动作分类、日本原画（sakuga）经典、中国戏曲动画传统。</p><p>起点问题：<strong>戏曲人物（杜丽娘）的微表情与近景表演做不到位</strong> —— 学的是迪士尼/皮克斯风格，但原画原理没打底。</p></blockquote>
+<hr>
+<h2>三个入口（国内也能打开）</h2>
+<table><thead><tr><th>入口</th><th>网址</th><th>说明</th></tr></thead><tbody><tr><td><strong>国内直连（推荐）</strong></td><td><code>https://cdn.jsdelivr.net/gh/Ivy-Piggy/anime-key-animation@main/site/index.html</code></td><td>jsDelivr CDN，国内一般可直连；整站自带样式，不依赖 Jekyll</td></tr><tr><td>GitHub Pages</td><td>https://ivy-piggy.github.io/anime-key-animation/</td><td>原站（<code>.md</code> 由 Jekyll 渲染成 <code>.html</code>）</td></tr><tr><td>仓库源码</td><td>https://github.com/Ivy-Piggy/anime-key-animation</td><td>需要梯子</td></tr></tbody></table>
+<blockquote><p><code>site/</code> 目录是 <code>scripts/build_static.py</code> 生成的<strong>零依赖静态镜像</strong>：页面自带 CSS、站内链接已转成 <code>.html</code>。</p><p>因此它可以在任何静态托管 / CDN / 网盘上整站打开。<strong>内容更新后跑一次即可：</strong></p><p>```bash</p><p>python3 scripts/build_static.py</p><p>```</p></blockquote>
+<hr>
+<h2>这个库解决什么</h2>
+<table><thead><tr><th>症状</th><th>缺的东西</th><th>对应模块</th></tr></thead><tbody><tr><td>动作"能动，但不好看、不干净"</td><td>动作规律（力、预备、跟随、弧线）</td><td><a href="01-principles/00-index.html">01 原画原理</a></td></tr><tr><td><strong>动作"有，但没有力"（轻飘飘／像机器人／说动就动／一停就死）</strong></td><td><strong>蓄力·惯性·重量感·弧线四个工位的可操作旋钮</strong></td><td><strong><a href="01-principles/07-clinic.html">01 原画门诊</a></strong></td></tr><tr><td>动作"节奏是平的，没有轻重缓急"</td><td>时间与间距、摄影表、缓急控制</td><td><a href="01-principles/03-timing-spacing.html">01 原画原理</a></td></tr><tr><td><strong>近景表情"不真、木、没有戏"</strong></td><td><strong>表演原画：微表情、眼神、呼吸、口型</strong></td><td><a href="02-acting/00-index.html">02 表演原画</a></td></tr><tr><td>想做某个具体动作（走/转身/水袖）没参照</td><td>连续动作分类库</td><td><a href="03-motion/00-index.html">03 动作库</a></td></tr><tr><td>想让动作更有"日本动画那种爽感"</td><td>日本原画师与经典连续动作</td><td><a href="04-sakuga/00-index.html">04 日本原画</a></td></tr><tr><td>民族风格动画不知道怎么"化"</td><td>中国动画原画传统（美影厂、戏曲动画）</td><td><a href="05-china/00-index.html">05 中国原画</a></td></tr><tr><td>不知道从脚本到原画的工序</td><td>迪士尼/皮克斯工作法与自检表</td><td><a href="06-workflow/00-index.html">06 工作法</a></td></tr><tr><td><strong>用 AI 却推不动（抽卡抽不到、一镜到底拼不上）</strong></td><td><strong>确定性流程：四锚 · ≤2 秒分段 · 三种缝法 · 抽卡日志</strong></td><td><strong><a href="06-workflow/03-ai-video-pipeline.html">06 工作法</a></strong></td></tr><tr><td><strong>知道要动，但不知道从哪一帧下手</strong></td><td><strong>动作拆解五步法（意图句 → 三段 → 关键姿势 → 摄影表 → 自查）</strong></td><td><strong><a href="06-workflow/05-motion-breakdown.html">06 工作法</a></strong></td></tr><tr><td>不知道去哪找、看什么书</td><td>书单、数据库、检索式</td><td><a href="07-resources/00-index.html">07 资源</a></td></tr></tbody></table>
+<p><strong>项目档案</strong>：<a href="references/duliniang-project.html">杜丽娘案例推演</a> · <a href="references/huazhongren-project.html">《画中人》脆桃短片</a> · <a href="references/sourcing-log.html">检索与核验记录</a></p>
+<hr>
+<h2>三种用法</h2>
+<ol><li><strong>备课</strong> —— 03 动作库 每条都有「课堂讲法」栏：一个动作规律 → 三个正反例 → 一个课堂练习。</li><li><strong>做片子查表</strong> —— 遇到具体动作，从 03 的入口表直接跳到对应条目，拿帧数配方和间距注记。</li><li><strong>写论文/申报素材</strong> —— 04 与 05 有「术语对照」与「可引用判断」，可直接作为动画本体研究的材料。</li></ol>
+<hr>
+<h2>结构</h2>
+<pre><code>anime-key-animation/
+├── 01-principles/   原画原理：十二法则 / 动作规律 / 时间间距 / 帧数配方 / 剪影造型 / 门诊（症状→处方）
+├── 02-acting/       表演原画：微表情(FACS) / 近景表演 / 眼与手 / 口型 / 表演体系 / 戏曲转译
+├── 03-motion/       连续动作分类库：走 跑 转 跳 打 衣纹水袖 道具 表情拍子 群戏 特效
+├── 04-sakuga/       日本原画：术语表 / 原画师档案 / 按动作类型找场景
+├── 05-china/        中国原画：美影厂民族化 / 严定宪《动画技法》 / 戏曲动画谱系 / 当代
+├── 06-workflow/     工作法：迪士尼-皮克斯流程 / 自检 10 问 / AI 确定性流程 / 一镜到底 / 动作拆解五步法
+├── 07-resources/    书单 / 数据库与检索式 / 课程
+├── references/      项目档案与检索记录
+├── frames/          图证：程序生成的示意图 + 逐格导出的真实帧（见 frames/README.md）
+├── index.html       站点入口（多巴胺色系）
+└── README.md</code></pre>
+<hr>
+<h2>核验约定（重要）</h2>
+<p>本库内容分三级标注，请按级别采信：</p>
+<table><thead><tr><th>标记</th><th>含义</th><th>用法</th></tr></thead><tbody><tr><td>✅</td><td>原理性内容，行业共识，可放心使用</td><td>直接用于教学与制作</td></tr><tr><td>⚠️</td><td>具体<strong>作品-原画师-镜头</strong>的归属靠社群考据（sakugabooru 等），可能变动</td><td>引用前先在 sakugabooru 用英文名 + 作品名查一次</td></tr><tr><td>🔎</td><td>待补条目（已列大纲，尚未写满）</td><td>欢迎按大纲继续扩充</td></tr></tbody></table>
+<blockquote><p>动画原画圈的<strong>镜头归属考据</strong>是出了名的易错：同一镜头常有"作监代笔""第二原画""无表记"等情况。凡涉及"某某的哪个镜头"，务必查 <a href="https://www.sakugabooru.com/">sakugabooru</a> 或 sakuga@wiki 再引用。</p></blockquote>
+<hr>
+<h2>进度</h2>
+<ul><li>☑ 仓库建立与结构搭建</li><li>☑ 01 原画原理（十二法则 / 动作规律 / 时间间距 / 帧数配方）</li><li>☑ 01 原画门诊（症状 → 处方：蓄力·惯性·重量感·弧线的实践入口）</li><li>☑ 01 原画门诊的图证（4 张原创示意图 + 2×2 拼版，附可重绘脚本 frames/make_figs.py）</li><li>☑ 02 表演原画（含杜丽娘最要紧的微表情与近景清单）</li><li>☑ 02 表演原画的图证（4 张原创示意图 + 2×2 拼版，附可重绘脚本 frames/make_figs_acting.py）</li><li>☑ 03 动作库入口表 + 首批条目</li><li>☑ 04 日本原画术语表 + 首批原画师档案</li><li>☑ 05 中国原画传统</li><li>☑ 07 资源（书单 / 数据库 / 检索式）</li><li>☑ 06 工作法：AI 视频确定性流程（反"抽卡"）· 一镜到底（AI 版）· 动作拆解五步法</li><li>☑ 项目档案：《画中人》（杜丽娘 × 脆桃 × 小男孩）—— beat 表 / 镜头表 / 5 张动作施工单 / 8 天打卡清单</li><li>☐ 03 动作库剩余条目（群戏、特效细目）</li><li>☐ 04 按动作类型的场景索引逐条补齐（需联网逐条核验）</li><li>☐ 实拍参考法（自录参考 + 逐格对照）</li></ul>
+<div class="foot">本页由 <code>scripts/build_static.py</code> 从 Markdown 静态生成 · 原仓库 Ivy-Piggy/anime-key-animation</div>
+</div></body></html>
